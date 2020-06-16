@@ -42,7 +42,7 @@ author:
   email     : yanchaoma@foxmail.com
   facebook  : yanchaom # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : 1141679423Chao # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
-  weibo     : CrazyYanChao # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
+  weibo     : fake # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
   googleplus: coderyanchaoma # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
   telegram  : fake # "user_name" the last part of your profile url, e.g. https://t.me/user_name
   medium    : fake # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
