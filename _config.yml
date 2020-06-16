@@ -37,25 +37,25 @@ author:
   type      : person # "person" (default), "organization"
   name      : Yc-Ma
   url       : https://yc-ma.blog.csdn.net/
-  avatar    : https://github.com/crazyyanchao/blog/blob/master/images/avatar.png # path or url of avatar image (square)
+  avatar    : /images/avatar.png # path or url of avatar image (square)
   bio       : I am an amazing person.
   email     : yanchaoma@foxmail.com
   facebook  : yanchaom # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : 1141679423Chao # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : CrazyYanChao # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
   googleplus: coderyanchaoma # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
-  telegram  : # "user_name" the last part of your profile url, e.g. https://t.me/user_name
-  medium    : # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
+  telegram  : fake # "user_name" the last part of your profile url, e.g. https://t.me/user_name
+  medium    : fake # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
   zhihu     : ma-yan-chao-64 # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
-  douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
+  douban    : fake # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
   linkedin  : yanchao-ma-0624b3b7 # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
   github    : crazyyanchao # "user_name" the last part of your profile url, e.g. https://github.com/user_name
-  npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
+  npm       : fake # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: user_name/repo_name
+repository: crazyyanchao/blog
 repository_tree: master
 
 
