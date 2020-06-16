@@ -7,5 +7,3 @@
 
 | [Linkedin](https://www.linkedin.com/in/yanchao-ma-0624b3b7/) | [CSDN](https://yc-ma.blog.csdn.net) | [GitHubIO](https://crazyyanchao.github.io/blog) | [GitHub](https://github.com/crazyyanchao) |
 
-![CSDN](https://raw.githubusercontent.com/crazyyanchao/blog/master/images/csdn-logo.png)
-
