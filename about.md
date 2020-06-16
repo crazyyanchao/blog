@@ -5,5 +5,5 @@
 
 ## Contact
 
-| [GitHub](https://github.com/crazyyanchao) | [Linkedin](https://www.linkedin.com/in/yanchao-ma-0624b3b7/) | [CSDN](https://yc-ma.blog.csdn.net) |
+| [Linkedin](https://www.linkedin.com/in/yanchao-ma-0624b3b7/) | [CSDN](https://yc-ma.blog.csdn.net) | [GitHub](https://github.com/crazyyanchao) |
 
