@@ -1,6 +1,6 @@
 # Tony.Ma
 
-Neo4j认证技术专家
+Neo
 
 ## Contact
 
