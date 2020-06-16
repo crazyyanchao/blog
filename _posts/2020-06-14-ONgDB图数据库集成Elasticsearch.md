@@ -1,10 +1,9 @@
 ---
-title: Welcome
-tags: ONgDB,es
+title: ONgDB图数据库集成Elasticsearch
+tags: [ONgDB,ElasticSearch]
 ---
 
 Here's the table of contents:
-
 1. TOC
 {:toc}
 
@@ -32,6 +31,7 @@ elasticsearch.index_spec=pre_org_cn_node:PRE公司中文名称(name,hcode,pcode,
 > 索引mapping不建议使用自动生成的字段类，需要自定义设置，用es的put接口生成。图库中的标签与es的索引类型相对应，索引名使用英文定义并且不要和索引集群的其它索引重名。
 
 - 【Mapping支持不区分大小写查询】put https://localhost:9200/pre_org_cn_node
+
 ```json
 {
   "settings": {
@@ -105,6 +105,7 @@ elasticsearch.index_spec=pre_org_cn_node:PRE公司中文名称(name,hcode,pcode,
   }
 }
 ```
+
 ## 初始化数据导入
 如果图库中已经有数据则按照下列说明对应操作。无数据则不用再手动同步，插件的事务同步机制会自动同步数据。
 >创建好mapping之后重启图库。例如初始化导入‘PRE公司中文名称’标签下节点的数据，可以用以下过程：【进行索引数据强制事务提交：n.is_indices=1】【设置一个属性的原因就是为了单独触发事务更新机制，让数据同步到elasticsearch集群】
@@ -223,9 +224,9 @@ MATCH (n:`PRE公司中文名称`) WHERE ID(n)=TOINT(nodeId) RETURN n
 ```
 - 使用unwind设置索引配置
 ```
-UNWIND [{esUrl:'https://localhost:9200',indexName:'pre_org_cn_node'}] AS configuration 
+UNWIND [{esUrl:'https://localhost:9200',indexName:'pre_org_cn_node'}] AS configuration
 WITH configuration.esUrl AS esUrl,configuration.indexName AS indexName
-CALL apoc.es.query(esUrl,indexName,'',null,{aggs: {field: {terms: {field: 'name',size: 1}}}}) yield value 
+CALL apoc.es.query(esUrl,indexName,'',null,{aggs: {field: {terms: {field: 'name',size: 1}}}}) yield value
 WITH value.aggregations.field.buckets AS aggregations,esUrl,indexName
 UNWIND aggregations AS keyCount
 WITH keyCount.key AS name,esUrl,indexName
