@@ -234,4 +234,5 @@ UNWIND hits AS hit
 WITH hit._source.id AS nodeId
 MATCH (n:`PRE公司中文名称`) WHERE ID(n)=TOINT(nodeId) RETURN n
 ```
-
+## 参考资料
+[Neo4j and ElasticSearch](https://neo4j.com/developer/elastic-search/)
