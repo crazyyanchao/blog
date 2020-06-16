@@ -4,7 +4,7 @@ Neo4j认证技术专家，大数据架构工程师
 
 ## Contact
 
-| [GitHub](https://github.com/crazyyanchao) | [WeiBo](https://www.weibo.com/CrazyYanChao) | [Linkedin](https://www.linkedin.com/in/yanchao-ma-0624b3b7/) | [CSDN](https://yc-ma.blog.csdn.net) |
+| [GitHub](https://github.com/crazyyanchao) | [Linkedin](https://www.linkedin.com/in/yanchao-ma-0624b3b7/) | [CSDN](https://yc-ma.blog.csdn.net) |
 
 ## Teck Stack
 
