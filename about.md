@@ -37,13 +37,13 @@ key: page-about
 | [Linkedin](https://www.linkedin.com/in/yanchao-ma-0624b3b7/) | [CSDN](https://yc-ma.blog.csdn.net) | [GitHubIO](https://crazyyanchao.github.io/blog) | [GitHub](https://github.com/crazyyanchao) |
 
 ## Skills | 主要技能
-- Java | Shell | Python | Scala
-- Neo4j | ONgDB | MySQL | SQL | Cypher
-- Elasticsearch
-- Spring Boot
-- Maven | Git
-- IntelliJ IDEA | Slack |VNote | Sublime Text | Postman | Navicat | Xshell | Chrome
-- Windows | Linux
+- | Java | Shell | Python | Scala |
+- | Neo4j | ONgDB | MySQL | SQL | Cypher |
+- | Elasticsearch |
+- | Spring Boot |
+- | Maven | Git |
+- | IntelliJ IDEA | Slack |VNote | Sublime Text | Postman | Navicat | Xshell | Chrome |
+- | Windows | Linux |
 
 ## About Me | 关于我
 你们好，我叫Tony.Ma，这是我的博客。
