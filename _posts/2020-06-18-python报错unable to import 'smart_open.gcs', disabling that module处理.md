@@ -65,4 +65,8 @@ sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) ORA-12154: TNS: 无法�
 ```
 sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) DPI-1072: the Oracle Client library version is unsupported
 ```
+- [下载cx-Oracle 5.3](https://pypi.org/project/cx-Oracle/5.3/#files)
+```
+cx_Oracle-5.3-11g.win-amd64-py3.6-2
+```
 
