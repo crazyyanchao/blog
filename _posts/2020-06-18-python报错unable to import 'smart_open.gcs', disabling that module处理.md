@@ -38,3 +38,30 @@ python -m pip install D:\software\python\smart_open-1.10.0-py3-none-any.whl
 ```
 import Error:DDL load failed
 ```
+## Oracle报错处理
+### 报错内容1
+```
+cx_Oracle.DatabaseError: DPI-1047: Cannot locate a 64-bit Oracle Client library: "The specified modu
+```
+- 安装Oracle
+```
+pip install cx_Oracle
+```
+- 下载instant-client将其下所有OCI.dll文件复制到site-packages下面【C:\Users\mayc01\Anaconda3\Lib\site-packages】
+[下载instant-client](https://www.oracle.com/database/technologies/instant-client/winx64-64-downloads.html)
+- 查看site-packages目录
+```
+import site; site.getsitepackages()
+```
+
+### 报错内容2
+```
+sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) ORA-12154: TNS: 无法解析指定的连接标识符
+```
+- [下载OCI](https://www.oracle.com/database/technologies/instant-client/winx64-64-downloads.html)
+- 将OCI放置在【C:\Users\mayc01\Anaconda3\Lib\site-packages】目录下
+
+### 报错内容3
+```
+sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) DPI-1072: the Oracle Client library version is unsupported
+```
