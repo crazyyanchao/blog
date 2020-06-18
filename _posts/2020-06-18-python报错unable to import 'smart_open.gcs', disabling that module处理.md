@@ -70,3 +70,5 @@ sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) DPI-1072: the Oracle Cli
 cx_Oracle-5.3-11g.win-amd64-py3.6-2
 ```
 
+## 【请使用3.6版本:)】
+
