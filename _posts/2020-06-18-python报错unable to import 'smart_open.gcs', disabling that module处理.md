@@ -65,3 +65,4 @@ sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) ORA-12154: TNS: 无法�
 ```
 sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) DPI-1072: the Oracle Client library version is unsupported
 ```
+
