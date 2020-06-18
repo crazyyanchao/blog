@@ -1,6 +1,6 @@
 ---
 title: ONgDB图数据库集成Elasticsearch
-tags: [ONgDB,ElasticSearch]
+tags: [ONgDB,Elasticsearch]
 ---
 
 Here's the table of contents:
@@ -19,7 +19,7 @@ Here's the table of contents:
 ## 索引的示例配置【在neo4j.conf中配置】
 ```
 #********************************************************************
-## ONgDB ElasticSearch Integration
+## ONgDB Elasticsearch Integration
 ##********************************************************************
 ## elasticsearch.discovery=true
 elasticsearch.host_name=https://localhost:9200
@@ -235,4 +235,4 @@ WITH hit._source.id AS nodeId
 MATCH (n:`PRE公司中文名称`) WHERE ID(n)=TOINT(nodeId) RETURN n
 ```
 ## 参考资料
-[Neo4j and ElasticSearch](https://neo4j.com/developer/elastic-search/)
+[Neo4j and Elasticsearch](https://neo4j.com/developer/elastic-search/)
