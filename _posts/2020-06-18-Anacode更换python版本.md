@@ -1,6 +1,6 @@
 ---
 title: Anacode更换python版本
-tags: [Tag1,Tag2]
+tags: [Python,Anacode]
 ---
 
 Here's the table of contents:
