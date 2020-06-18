@@ -47,7 +47,7 @@ cx_Oracle.DatabaseError: DPI-1047: Cannot locate a 64-bit Oracle Client library:
 ```
 pip install cx_Oracle
 ```
-- 下载instant-client将其下所有OCI.dll文件复制到site-packages下面【C:\Users\mayc01\Anaconda3\Lib\site-packages】
+- 下载instant-client将其下OCI.dll文件复制到site-packages下面【C:\Users\mayc01\Anaconda3\Lib\site-packages】
 [下载instant-client](https://www.oracle.com/database/technologies/instant-client/winx64-64-downloads.html)
 - 查看site-packages目录
 ```
@@ -69,6 +69,3 @@ sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) DPI-1072: the Oracle Cli
 ```
 cx_Oracle-5.3-11g.win-amd64-py3.6-2
 ```
-
-## 【以上安装包版本请对应到python-3.6:)】
-
