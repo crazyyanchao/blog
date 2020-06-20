@@ -5,6 +5,7 @@ article_header:
   type: cover
   image:
     src: /screenshot.jpg
+key: 1
 pageview: true
 ---
 
