@@ -1,6 +1,9 @@
 ---
 title: python报错unable to import 'smart_open.gcs', disabling that module处理
 tags: [Python]
+author: Yc-Ma
+show_author_profile: true
+key: 2020-06-18-python报错unable to import 'smart_open.gcs', disabling that module处理
 ---
 
 Here's the table of contents:

@@ -1,6 +1,9 @@
 ---
 title: Elasticsearch常用查询
 tags: [Elasticsearch]
+author: Yc-Ma
+show_author_profile: true
+key: 2020-06-18-Elasticsearch常用查询
 ---
 
 Here's the table of contents:
