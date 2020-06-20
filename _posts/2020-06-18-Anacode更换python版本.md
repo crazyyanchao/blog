@@ -4,6 +4,7 @@ tags: [Python,Anacode]
 author: Yc-Ma
 show_author_profile: true
 key: 2020-06-18-Anacode更换python版本
+pageview: true
 ---
 
 Here's the table of contents:

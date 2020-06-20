@@ -4,6 +4,7 @@ tags: [ONgDB,Elasticsearch]
 author: Yc-Ma
 show_author_profile: true
 key: 2020-06-14-ONgDB图数据库集成Elasticsearch
+pageview: true
 ---
 
 Here's the table of contents:
