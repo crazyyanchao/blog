@@ -105,6 +105,14 @@ paginate_path: /page:num # don't change this unless for special need
 sources: # bootcdn (default), unpkg
 
 
+### => Sharing
+###############################
+#sharing:
+#  provider: addthis # false (default), "addtoany", "addthis", "custom"
+#
+#  ## AddThis
+#  addthis:
+#    id: ra-5eeedd110c58c3db # AddThis pubid, e.g. ra-5xxxxxxxxxxx
 ## => Sharing
 ##############################
 sharing:
@@ -112,7 +120,7 @@ sharing:
 
   ## AddThis
   addthis:
-    id: ra-5eeedd110c58c3db # AddThis pubid, e.g. ra-5xxxxxxxxxxx
+    id: ra-5be59ee2486770cb # AddThis pubid, e.g. ra-5xxxxxxxxxxx
 
 
 ## => Comments
