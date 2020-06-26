@@ -39,9 +39,9 @@ key: page-about
 ## Skills | 主要技能
 - | Neo4j认证技术专家 | 大数据架构工程师 |
 - | Java | Shell | Python | Scala |
-- | Neo4j | ONgDB | MySQL | SQL | Cypher |
-- | Elasticsearch | TensorFlow™ |
-- | Spring Boot |
+- | Neo4j Ecosystem | ONgDB Ecosystem | MySQL | SQL | Cypher |
+- | Elasticsearch Ecosystem | TensorFlow™ | Hadoop Ecosystem | Spark Ecosystem|
+- | Spring Boot | Data Visualization |
 - | Maven | Git |
 - | IntelliJ IDEA | Slack |VNote | Sublime Text | Postman | Navicat | Xshell | Chrome |
 - | Windows | Linux |
