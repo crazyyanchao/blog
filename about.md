@@ -40,7 +40,7 @@ key: page-about
 - | Neo4j认证技术专家 | 大数据架构工程师 |
 - | Java | Shell | Python | Scala |
 - | Neo4j | ONgDB | MySQL | SQL | Cypher |
-- | Elasticsearch |
+- | Elasticsearch | TensorFlow™ |
 - | Spring Boot |
 - | Maven | Git |
 - | IntelliJ IDEA | Slack |VNote | Sublime Text | Postman | Navicat | Xshell | Chrome |
