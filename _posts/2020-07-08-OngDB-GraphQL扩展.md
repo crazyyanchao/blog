@@ -57,6 +57,7 @@ type Person {
 CALL graphql.schema()
 ```
 ### 运行查询
+- 使用CYPHER运行GraphQL查询数据
 ```
 CALL graphql.query('{ Person(name:"test") {name born movies { title released tagline } }}')
 CALL graphql.query('{ Person(born: 1961) { born } }')
@@ -67,6 +68,7 @@ CALL graphql.query(query,{year:1995,limit:5}) YIELD result
 UNWIND result.Movie as movie
 RETURN movie.title, [a IN movie.actors | a.name] as actors
 ```
+- 使用HTTP接口运行GraphQL查询数据
 ```
 http://localhost:7474/graphql/experimental/
 {
@@ -75,13 +77,22 @@ http://localhost:7474/graphql/experimental/
     born
   }
 }
+OR
+query {person(name:"test", born:1961) {name, born}}
+
 相当于：MATCH (person:Person) WHERE person.name = 'test' AND person.born = 1961 RETURN person.name,person.born AS person
 ```
+- 使用CYPHER运行GraphQL修改数据
 ```
 // 执行修改操作
 CALL graphql.execute('mutation { createMovie(title:"The Shape of Water", released:2018)}')
 // 相当于下面这个CYPHER
 CREATE (n:Movie) SET n.title='The Shape of Water',n.released=2018
+```
+- 使用HTTP接口运行GraphQL修改数据
+```
+http://localhost:7474/graphql/experimental/
+mutation { createMovie(title:"The Shape of Water", released:2018)}
 ```
 ### 重置GraphQL Schema
 ```
