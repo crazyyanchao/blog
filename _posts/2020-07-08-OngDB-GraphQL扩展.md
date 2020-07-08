@@ -91,8 +91,10 @@ CREATE (n:Movie) SET n.title='The Shape of Water',n.released=2018
 ```
 - 使用HTTP接口运行GraphQL修改数据
 ```
-http://localhost:7474/graphql/experimental/
-mutation { createMovie(title:"The Shape of Water", released:2018)}
+http://localhost:7474/graphql/
+mutation {
+  createMovie(title: "The Shape of Water", released: 2018)
+}
 ```
 ### 重置GraphQL Schema
 ```
