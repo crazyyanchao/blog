@@ -83,7 +83,6 @@ http://localhost:7474/graphql/experimental/
 }
 OR
 query {person(name:"test", born:1961) {name, born}}
-
 相当于：MATCH (person:Person) WHERE person.name = 'test' AND person.born = 1961 RETURN person.name,person.born AS person
 ```
 
