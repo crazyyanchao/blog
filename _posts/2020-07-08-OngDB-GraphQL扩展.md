@@ -75,7 +75,7 @@ http://localhost:7474/graphql/experimental/
     born
   }
 }
-相当于：MATCH (person:Person) WHERE person.name = 'test' AND person.born = 1961 RETURN person { .name } AS person
+相当于：MATCH (person:Person) WHERE person.name = 'test' AND person.born = 1961 RETURN person.name,person.born AS person
 ```
 ```
 // 执行修改操作
