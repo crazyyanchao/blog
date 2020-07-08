@@ -58,17 +58,21 @@ CALL graphql.schema()
 ```
 ### 运行查询
 - 使用CYPHER运行GraphQL查询数据
+
 ```
 CALL graphql.query('{ Person(name:"test") {name born movies { title released tagline } }}')
 CALL graphql.query('{ Person(born: 1961) { born } }')
 ```
+
 ```
 WITH 'query ($year:Long,$limit:Int) { Movie(released: $year, first:$limit) { title, actors {name} } }' as query
 CALL graphql.query(query,{year:1995,limit:5}) YIELD result
 UNWIND result.Movie as movie
 RETURN movie.title, [a IN movie.actors | a.name] as actors
 ```
+
 - 使用HTTP接口运行GraphQL查询数据
+
 ```
 http://localhost:7474/graphql/experimental/
 {
@@ -82,7 +86,9 @@ query {person(name:"test", born:1961) {name, born}}
 
 相当于：MATCH (person:Person) WHERE person.name = 'test' AND person.born = 1961 RETURN person.name,person.born AS person
 ```
+
 - 使用CYPHER运行GraphQL修改数据
+
 ```
 // 执行修改操作
 CALL graphql.execute('mutation { createMovie(title:"The Shape of Water", released:2018)}')
@@ -90,25 +96,43 @@ CALL graphql.execute('mutation { createMovie(title:"The Shape of Water", release
 CREATE (n:Movie) SET n.title='The Shape of Water',n.released=2018
 ```
 - 使用HTTP接口运行GraphQL修改数据
+
 ```
 http://localhost:7474/graphql/
 mutation {
   createMovie(title: "The Shape of Water", released: 2018)
 }
 ```
+
 ### 重置GraphQL Schema
 ```
 CALL graphql.reset()
 ```
+
 ### 查看已有GraphQL Schema的字符串表示
 ```
 RETURN graphql.getIdl()
 ```
+
 ### 查看远程的GraphQL Schema
 ```
 CALL graphql.introspect("https://api.github.com/graphql",{Authorization:"bearer d8xxxxxxxxxxxxxxxxxxxxxxx"})
 ```
+
 ## 参考
 - [Neo4j-GraphQL Extension](https://github.com/neo4j-graphql/neo4j-graphql)
 - [JVM Library to translate GraphQL queries and mutations to Neo4j’s Cypher](https://github.com/neo4j-graphql/neo4j-graphql-java)
+
+```
+CALL graphql.idl('
+type Column  {
+  name: String!
+}
+')
+query {column(name:"ods.test_table.c1") {name}}
+
+mutation {
+  createColumn(name: "The Shape of Water")
+}
+```
 
