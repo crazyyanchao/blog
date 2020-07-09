@@ -136,3 +136,60 @@ mutation {
 }
 ```
 
+## OTHER
+- GraphQL Schema
+```
+type Movie {
+  title: String!
+  released: Int
+  actors: [Person] @relation(name: "ACTED_IN", direction: IN)
+}
+
+type Person {
+  name: String!
+  born: Int
+  movies: [Movie] @relation(name: "ACTED_IN")
+}
+```
+- mutation
+```
+mutation {
+  createMovie(title: "The Shape of Water", released: 2018)
+}
+```
+- query
+```
+query {
+  person(name: "Kelly McGillis", born: 1957) {
+    name
+    born
+  }
+}
+```
+## HORGShareHold
+- GraphQL Schema
+```
+type HORGShareHold {
+  name: String!
+  hcode: Int
+  hold: [HORGShareHold] @relation(name: "持股", direction: IN)
+  hORGShareHoldCount : Int @cypher(statement:"MATCH (:HORGShareHold) RETURN count(*)")
+}
+```
+- mutation
+```
+mutation {
+  createMovie(title: "The Shape of Water", released: 2018)
+}
+```
+- query
+```
+{
+  hORGShareHold(name: "武汉金田实业(华中)有限公司") {
+    name
+    hcode
+    hORGShareHoldCount
+  }
+}
+```
+
