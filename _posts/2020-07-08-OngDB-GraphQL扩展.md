@@ -94,6 +94,7 @@ CALL graphql.execute('mutation { createMovie(title:"The Shape of Water", release
 // 相当于下面这个CYPHER
 CREATE (n:Movie) SET n.title='The Shape of Water',n.released=2018
 ```
+
 - 使用HTTP接口运行GraphQL修改数据
 
 ```
