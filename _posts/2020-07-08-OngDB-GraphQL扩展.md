@@ -171,9 +171,17 @@ query {
 ```
 type HORGShareHold {
   name: String!
-  hcode: Int
-  hold: [HORGShareHold] @relation(name: "持股", direction: IN)
-  hORGShareHoldCount : Int @cypher(statement:"MATCH (:HORGShareHold) RETURN count(*)")
+  hcode: String!
+  hORGShareHoldCount: Int @cypher(statement: "MATCH (:HORGShareHold) RETURN count(*)")
+  hOrgShareHoldRelCount: String! @cypher(statement: "MATCH p=(n:HORGShareHold)-[r]->(m:HORGShareHold) RETURN COUNT(p)")
+  hold: [HORGShareHold] @relation(name: "HOLD")
+}
+
+type HORGGuarantee {
+  name: String!
+  hcode: String!
+  hORGGuaranteeCount: Int @cypher(statement: "MATCH (:HORGGuarantee) RETURN count(*)")
+  hORGGuaranteeRelCount: String! @cypher(statement: "MATCH p=(n:HORGGuarantee)-[r]->(m:HORGGuarantee) RETURN COUNT(p)")
 }
 ```
 - mutation
@@ -182,14 +190,76 @@ mutation {
   createMovie(title: "The Shape of Water", released: 2018)
 }
 ```
-- query
+- [1]query
 ```
+query($name1:String,$name2:String)
 {
-  hORGShareHold(name: "武汉金田实业(华中)有限公司") {
+  # =================查询持股网络的节点和统计值=================
+  # 查询名称匹配的公司
+  hORGShareHold(name: $name1) {
+    # 返回节点名称
     name
+    # 返回节点的HCODE
     hcode
+    # 返回这个标签下的节点统计值
     hORGShareHoldCount
+    # 返回HORGShareHold标签关联的持股关系数量
+    hOrgShareHoldRelCount
   }
+  # 查询名称匹配的公司
+  hORGShareHold(name: $name2) {
+    # 返回节点名称
+    name
+    # 返回节点的HCODE
+    hcode
+    # 返回这个标签下的节点统计值
+    hORGShareHoldCount
+    # 返回HORGShareHold标签关联的持股关系数量
+    hOrgShareHoldRelCount
+  }
+   # =================查询担保网络的节点和统计值=================
+  # 查询名称匹配的公司
+  hORGGuarantee(name: "长春万润房地产有限公司") {
+    # 返回节点名称
+    name
+    # 返回节点的HCODE
+    hcode
+    # 返回这个标签下的节点统计值
+    hORGGuaranteeCount
+    # 返回HORGGuarantee标签关联的持股关系数量
+    hORGGuaranteeRelCount
+  }
+}
+{
+  "name1":"深圳市金田房地产开发公司汕头公司",
+  "name2":"华美加国际(集团)有限公司",
+  "username":"ongdb",
+  "password":"ongdb%dev"
+}
+```
+- [2]query
+```
+query($name1:String)
+{
+  # =================查询持股网络是关联关系=================
+  # 查询名称匹配的公司
+  hORGShareHold(name: $name1) {
+    # 返回节点名称
+    name
+    # 返回节点的HCODE
+    hcode
+    hold{
+     # 返回节点名称
+     name
+     # 返回节点的HCODE
+     hcode
+    }
+  }
+}
+{
+  "name1":"深圳市金田房地产开发公司汕头公司",
+  "username":"ongdb",
+  "password":"ongdb%dev"
 }
 ```
 
