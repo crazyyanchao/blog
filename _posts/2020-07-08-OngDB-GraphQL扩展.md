@@ -37,6 +37,7 @@ type Person {
   movies: [Movie] @relation(name:"ACTED_IN")
 }
 ```
+
 ```
 CALL graphql.idl('
 type Movie  {
@@ -52,10 +53,12 @@ type Person {
 }
 ')
 ```
+
 ### 查看GraphQL Schema
 ```
 CALL graphql.schema()
 ```
+
 ### 运行查询
 - 使用CYPHER运行GraphQL查询数据
 
@@ -151,13 +154,17 @@ type Person {
   movies: [Movie] @relation(name: "ACTED_IN")
 }
 ```
+
 - mutation
+
 ```
 mutation {
   createMovie(title: "The Shape of Water", released: 2018)
 }
 ```
+
 - query
+
 ```
 query {
   person(name: "Kelly McGillis", born: 1957) {
@@ -166,6 +173,7 @@ query {
   }
 }
 ```
+
 ## HORGShareHold
 - GraphQL Schema
 ```
@@ -184,12 +192,14 @@ type HORGGuarantee {
   hORGGuaranteeRelCount: String! @cypher(statement: "MATCH p=(n:HORGGuarantee)-[r]->(m:HORGGuarantee) RETURN COUNT(p)")
 }
 ```
+
 - mutation
 ```
 mutation {
   createMovie(title: "The Shape of Water", released: 2018)
 }
 ```
+
 - [1]query
 ```
 query($name1:String,$name2:String)
@@ -237,6 +247,7 @@ query($name1:String,$name2:String)
   "password":"ongdb%dev"
 }
 ```
+
 - [2]query
 ```
 query($name1:String)
