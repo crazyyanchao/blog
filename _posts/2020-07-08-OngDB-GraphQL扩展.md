@@ -173,7 +173,7 @@ query {
 }
 ```
 
-## HORGShareHold
+## HORGShareHold标签
 - GraphQL Schema
 ```
 type HORGShareHold {
