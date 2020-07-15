@@ -13,7 +13,7 @@ Here's the table of contents:
 
 ## 组件安装
 ### 下载插件
-- [GraphiQL](https://www.electronjs.org/apps/graphiql)A GUI for editing and testing GraphQL queries and mutations
+- [GraphiQL](https://www.electronjs.org/apps/graphiql) A GUI for editing and testing GraphQL queries and mutations
 
 ### 修改neo4j.conf配置
 ```
@@ -147,7 +147,6 @@ type Movie {
   released: Int
   actors: [Person] @relation(name: "ACTED_IN", direction: IN)
 }
-
 type Person {
   name: String!
   born: Int
@@ -184,7 +183,6 @@ type HORGShareHold {
   hOrgShareHoldRelCount: String! @cypher(statement: "MATCH p=(n:HORGShareHold)-[r]->(m:HORGShareHold) RETURN COUNT(p)")
   hold: [HORGShareHold] @relation(name: "HOLD")
 }
-
 type HORGGuarantee {
   name: String!
   hcode: String!
