@@ -20,7 +20,7 @@ HTTP访问时出现：
 ```
 
 ## 查看HTTP访问设置
-![](_v_images/20201021102704595_17137.png)
+![](https://raw.githubusercontent.com/crazyyanchao/blog/master/images/2020/10/2020-10-28-HTTP%2080%20failed%20respond/20201021102704595_17137.png)
 
 ## 修改HTTP访问设置
 - A系统设置的接口为短连接
