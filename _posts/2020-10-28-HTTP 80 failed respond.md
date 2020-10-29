@@ -22,7 +22,7 @@ HTTP访问时出现：
 ## 查看HTTP访问设置
 ![](https://raw.githubusercontent.com/crazyyanchao/blog/master/images/2020/10/2020-10-28-HTTP%2080%20failed%20respond/20201021102704595_17137.png)
 
-## 修改HTTP访问设置
+## 修改HTTP访问设置【弃用】
 - A系统设置的接口为短连接
 - B系统设置的接口为长连接
 - B系统同一个接口调多次A系统的接口的时候，第一次请求完成之后，A系统会断开连接，而B系统不会断开连接，再次访问A系统的时候还是会用上一次请求的端口继续请求A系统，因为A系统已经释放了连接，所以端口会丢失，再试访问会报错：80 failed to respond
@@ -32,4 +32,18 @@ HTTP访问时出现：
 长连接：Connection: Keep-alive
 ```
 
+## 修改缓冲区大小
+https://stackoverflow.com/questions/26111331/org-apache-http-nohttpresponseexception-xx-xx-xx-xx443-failed-to-respond
+```
+ /**
+  * Finally I fix the issue and it is caused by buffer size. By default, buffer size of httpclient is 8k. So I change it to 4k and my code works well.
+  * **/
+        ConnectionConfig connectionConfig = ConnectionConfig.custom()
+                .setBufferSize(4128)
+                .build();
+        httpClient = HttpClients.custom()
+                .setDefaultConnectionConfig(connectionConfig)
+                .build();
+        HttpResponse httpResponse = httpClient.execute(httpPost);
+```
 
