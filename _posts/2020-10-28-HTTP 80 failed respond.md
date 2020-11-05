@@ -47,3 +47,11 @@ https://stackoverflow.com/questions/26111331/org-apache-http-nohttpresponseexcep
         HttpResponse httpResponse = httpClient.execute(httpPost);
 ```
 
+## 备注
+- 【负载过高服务端丢弃连接导致80failed】
+- 【HTTP传输层TCP连接复用机制导致80响应失败】
+- 【HttpClient的keepalive时间大于服务端，导致服务端关闭连接，可能导致服务端关闭连接超时】
+- 【除了在客户端设置小于服务端的Keepalive时间，还有一种做法是在出现NoHttpResponseException时进行重试，也是可以的，还可以减少TIME_WAIT数量。】
+- 【修改缓冲区大小】
+
+
