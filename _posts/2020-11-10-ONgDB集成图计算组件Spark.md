@@ -27,7 +27,7 @@ neo4j-spark-connector-full-2.4.1-M1 https://github.com/neo4j-contrib/neo4j-spark
 hadoop-2.7.7
 spark-2.4.0-bin-hadoop2.7
 winutils
-neo4j-spark-connector-full-2.4.1-M1
+neo4j-spark-connector-full-2.4.1-M1 【把jar包放到spark/jars文件夹里】
 scala-2.11.12
 ```
 
