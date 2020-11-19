@@ -114,4 +114,22 @@ scala-maven-plugin从插件修改为dependency
 </dependency>
 ```
 
+### 【三】报错
+引入SCALA部分包失败
+```
+Error:(6,28) java: 程序包org.apache.spark.sql不存在
+Error:(7,28) java: 程序包org.apache.spark.sql不存在
+Error:(8,28) java: 程序包org.apache.spark.sql不存在
+Error:(9,33) java: 程序包org.neo4j.spark.dataframe不存在
+Error:(20,19) java: 找不到符号
+Error:(39,20) java: 找不到符号
+Error:(43,12) java: 找不到符号
+Error:(43,20) java: 找不到符号
+Error:(53,12) java: 找不到符号
+Error:(53,20) java: 找不到符号
+```
 
+### 【三】解决方案
+```
+
+```
