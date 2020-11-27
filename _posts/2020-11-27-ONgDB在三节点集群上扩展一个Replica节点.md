@@ -11,8 +11,6 @@ Here's the table of contents:
 1. TOC
 {:toc}
 
-## Title1
-
 ### 新建用户
 ```
 ## CentOS创建新用户
@@ -22,6 +20,13 @@ sudo adduser ongdb-replica
 sudo passwd ongdb-replica
 3、切换用户
 su - ongdb-replica
+```
+
+### 优化配置
+```
+# 该配置只配置CORE节点
+#【之前遇到过在跑算法模型时此配置中存在Replica节点时，Replica节点会挂掉】【CORE节点挂掉Replica节点也不能挂，至少保证业务可以正常使用】
+causal_clustering.initial_discovery_members=ongdb-1:5000,ongdb-2:5001
 ```
 
 ### 修改配置文件neo4j.conf
@@ -346,7 +351,7 @@ causal_clustering.minimum_core_cluster_size_at_runtime=2
 # A comma-separated list of the address and port for which to reach all other members of the cluster. It must be in the
 # host:port format. For each machine in the cluster, the address will usually be the public ip address of that machine.
 # The port will be the value used in the setting "causal_clustering.discovery_listen_address".
-causal_clustering.initial_discovery_members=ongdb-1:5000,ongdb-2:5001,ongdb-replica-1:5002
+causal_clustering.initial_discovery_members=ongdb-1:5000,ongdb-2:5001
 
 # Host and port to bind the cluster member discovery management communication.
 # This is the setting to add to the collection of address in causal_clustering.initial_core_cluster_members.
@@ -868,7 +873,6 @@ apoc.import.file.enabled=true
 metrics.prometheus.enabled=true
 # The default is localhost:2004.
 metrics.prometheus.endpoint=localhost:2304
-
 
 #********************************************************************
 ## ONgDB ElasticSearch Integration
