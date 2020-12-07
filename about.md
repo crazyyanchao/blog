@@ -38,7 +38,7 @@ key: page-about
 
 - 微信公众号：马超的博客
 
-![Qr-code-for-public-account](https://raw.githubusercontent.com/crazyyanchao/blog/master/images/2020/12/about/qrcode_for_gh_cc024f975a32_258.jpg)
+![Qr-code-for-public-account](https://img-blog.csdnimg.cn/20201207192614699.jpg#pic_left)
 
 ## Skills | 主要技能
 - | Neo4j认证技术专家 | 大数据架构工程师 |
