@@ -36,6 +36,8 @@ key: page-about
 
 | [Linkedin](https://www.linkedin.com/in/yanchao-ma-0624b3b7/) | [CSDN](https://yc-ma.blog.csdn.net) | [GitHubIO](https://crazyyanchao.github.io/blog) | [GitHub](https://github.com/crazyyanchao) |
 
+![Qr-code-for-public-account](https://raw.githubusercontent.com/crazyyanchao/blog/master/images/2020/12/about/qrcode_for_gh_cc024f975a32_258.jpg)
+
 ## Skills | 主要技能
 - | Neo4j认证技术专家 | 大数据架构工程师 |
 - | Java | Shell | Python | Scala |
