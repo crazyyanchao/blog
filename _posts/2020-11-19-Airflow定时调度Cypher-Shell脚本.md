@@ -68,3 +68,7 @@ CALL apoc.periodic.iterate('CALL apoc.load.jdbc(\'jdbc:mysql://datalab-contentdb
 RETURN batches,total,timeTaken,committedOperations,failedOperations,failedBatches,retries,errorMessages,batch,operations;
 ```
 
+### 调度超大图数据的TASK实现方案【单个TASK的实现方案】
+- 1、获取上一个checkpoint time【存储在MySQL中】【(from)-[r]->(to):变量from/r/to都需要存储】【节点开始结束标签和关系类型作为关系的唯一标准】
+- 2、【(from)-[r]->(to):执行CYPHER任务】【将第一个执行的构建节点的CYPHER的运行结束时的系统时间保存到MySQL作为下一个checkpoint time】
+

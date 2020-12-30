@@ -11,6 +11,42 @@ Here's the table of contents:
 1. TOC
 {:toc}
 
+### 下载Kafka
+```
+wget https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.7.0/kafka_2.12-2.7.0.tgz
+```
+
+### 解压
+```
+tar -zxvf kafka_2.12-2.7.0.tgz
+```
+
+### 启动
+```
+./zookeeper-server-start.sh ../config/zookeeper.properties
+```
+```
+./kafka-server-start.sh ../config/server.properties
+```
+
+### 测试Kafka
+- 创建kafka TestTopic
+```
+./kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic TestTopic
+```
+- 查看创建了多少个topic
+```
+./kafka-topics.sh --list --zookeeper localhost:2181
+```
+- 通过生产者进行发送消息
+```
+./kafka-console-producer.sh --broker-list localhost:9092 --topic TestTopic
+```
+- 消费者来进行接收消息
+```
+./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TestTopic --from-beginning
+```
+
 ### 下载neo4j-streams组件包
 ```
 https://github.com/neo4j-contrib/neo4j-streams/releases/tag/3.5.12
@@ -33,13 +69,40 @@ streams.sink.errors.log.enable=true
 # 在日志中包含消息内容
 streams.sink.errors.log.include.messages=true
 ```
-- TestTopic中的消息
+
+### 监听TestTopic并运行指定CYPHER操作
+- 通过生产者给TestTopic发送消息
 ```
-{  "id":"1",
-   "properties":{
-      "name":"Smith",
-      "dob":19800101
-   }
-}
+{  "id":"111","properties":{"name":"Smith","dob":19800101}}
 ```
+
+### 通过生产者发送CYPHER操作给CypherTopic
+- 新增配置
+```
+streams.sink.topic.cypher.CypherTopic=event.cypher
+```
+- 创建Topic并启动生产者和消费者
+```
+./kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic CypherTopic
+./kafka-console-producer.sh --broker-list localhost:9092 --topic CypherTopic
+./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic CypherTopic --from-beginning
+```
+- 通过生产者给CypherTopic发送消息
+```
+{  "cypher":"MERGE (n:Person {id:'TEST-CYPHER-TOPIC'})"}
+{  "cypher":"MERGE (n:Person {id:'TEST-CYPHER-TOPIC2'})"}
+```
+- 查询通过kafka发送过来的CYPHER创建的数据
+```
+MATCH (n:Person {id:'TEST-CYPHER-TOPIC'}) RETURN n
+```
+- 生产消息
+```
+CALL streams.publish('CypherTopic', 'SEND CypherTopic DATA!')
+```
+- 消费消息
+```
+CALL streams.consume('CypherTopic', {}) YIELD event RETURN event
+```
+
 
