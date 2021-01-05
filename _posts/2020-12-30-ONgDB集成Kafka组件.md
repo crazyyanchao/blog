@@ -71,15 +71,15 @@ streams.sink.errors.log.include.messages=true
 ```
 
 ### 监听TestTopic并运行指定CYPHER操作
-- 通过生产者给TestTopic发送消息
+- 通过生产者给TestTopic发送消息【该消息会触发streams.sink.topic.cypher.TestTopic监听的CYPHER】
 ```
 {  "id":"111","properties":{"name":"Smith","dob":19800101}}
 ```
 
-### 通过生产者发送CYPHER操作给CypherTopic
+### 通过生产者发送CYPHER操作给CypherTopic【从消息队列获取CYPHER后执行】
 - 新增配置
 ```
-streams.sink.topic.cypher.CypherTopic=event.cypher
+streams.sink.topic.cypher.CypherTopic=CALL apoc.cypher.doIt(event.cypher,{}) YIELD value RETURN value
 ```
 - 创建Topic并启动生产者和消费者
 ```
@@ -89,18 +89,19 @@ streams.sink.topic.cypher.CypherTopic=event.cypher
 ```
 - 通过生产者给CypherTopic发送消息
 ```
-{  "cypher":"MERGE (n:Person {id:'TEST-CYPHER-TOPIC'})"}
-{  "cypher":"MERGE (n:Person {id:'TEST-CYPHER-TOPIC2'})"}
+{  "cypher":"MERGE (n:Person {id:'TEST-CYPHER-TOPIC-doit-1'})"}
+{  "cypher":"MERGE (n:Person {id:'TEST-CYPHER-TOPIC2-doit-1'})"}
+{  "cypher":"MERGE (n:Person {id:'TEST-CYPHER-TOPIC2-doit-2'})"}
 ```
 - 查询通过kafka发送过来的CYPHER创建的数据
 ```
-MATCH (n:Person {id:'TEST-CYPHER-TOPIC'}) RETURN n
+MATCH (n:Person {id:'TEST-CYPHER-TOPIC2-doit-2'}) RETURN n
 ```
-- 生产消息
+- 生产消息的存储过程
 ```
 CALL streams.publish('CypherTopic', 'SEND CypherTopic DATA!')
 ```
-- 消费消息
+- 消费消息的存储过程
 ```
 CALL streams.consume('CypherTopic', {}) YIELD event RETURN event
 ```
