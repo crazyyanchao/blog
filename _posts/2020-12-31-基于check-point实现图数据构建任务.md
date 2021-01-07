@@ -124,6 +124,25 @@ CALL apoc.do.case([batchFailedSize>0,'CALL apoc.load.jdbcUpdate(\'jdbc:mysql://d
 - 3. 任务状态同步：关系TASK-CHECK-POINT和节点TASK-CHECK-POINT状态同步
 - 4. 任务状态锁：【图数据构建任务状态锁】【保证某一时刻关系的DAG中TASK运行的唯一性】
 ```
+## 调度系统执行逻辑
+>大规模重复并发执行写入操作会导致图数据库服务堆积大量的写入请求导致服务性能下降甚至宕机，因此TASK锁机制设计非常重要，必须保证在同一时刻写入任务不可重复执行；检查点机制的设计保证了数据同步的一致性和完整性；TASK占用过多系统内存【尤其在处理大量数据时】图数据库服务会存在宕机风险，数据分块方案的设计很好的避免了这个问题。
+### 异构图数据构建任务执行逻辑
+- 每个任务都需要获取锁然后执行数据构建逻辑，不管构建逻辑是否成功执行TASK结束时必须释放锁
+- [FROM-NODE-TASK]负责锁的node_check-point更新以及后续任务的rel_check_point同步
+- [TO-NODE-TASK]负责node_check-point的回滚
+- [REL-TASK]负责node_check-point的回滚和任务状态同步rel_check_point=node_check_point
+```
+[FROM-NODE-TASK]->[TO-NODE-TASK]->[REL-TASK]
+```
+### 同构图数据构建任务执行逻辑
+- 每个任务都需要获取锁然后执行数据构建逻辑，不管构建逻辑是否成功执行TASK结束时必须释放锁
+- [NODE-TASK]负责锁的node_check-point更新以及后续任务的rel_check_point同步
+- [REL-TASK]负责node_check-point的回滚和任务状态同步rel_check_point=node_check_point
+```
+[NODE-TASK]->[REL-TASK]
+```
+```
+```
 CREATE TABLE `ONGDB_TASK_CHECK_POINT` (
 `huid` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增主键',
 `hcode` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '代码：HGRAPHTASK(FromLabel)-[RelType]->(ToLabel)',
@@ -132,8 +151,6 @@ CREATE TABLE `ONGDB_TASK_CHECK_POINT` (
 `to` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'MSTR_ORG的hcode',
 `node_check_point` datetime DEFAULT '1900-01-01 00:00:00' COMMENT '节点可以获取检查点时间可更改，关系TASK可以获取检查点时间【一个完整的图数据DAG-TASK必须包含节点和关系构建TASK】',
 `rel_check_point` datetime DEFAULT '1900-01-01 00:00:00' COMMENT '保存更新前node_check_point的值',
-`from_update_check` int(2) NOT NULL DEFAULT '0' COMMENT 'from是否更新检查点：0-否，1-是【from和to是一样的标签则不需要使用此判断】',
-`to_update_check` int(2) NOT NULL DEFAULT '0' COMMENT 'to是否更新了检查点：0-否，1-是【from和to是一样的标签则不需要使用此判断】',
 `description` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '对该检查点任务的具体描述',
 `overall_data_split_cypher` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci COMMENT '同步全量数据的CYPHER：数据分块方案脚本',
 `overall_data_timezone_cypher` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci COMMENT '同步全量数据的CYPHER：不设置时间范围的同步脚本',
@@ -156,10 +173,8 @@ KEY `check_point` (`node_check_point`) USING BTREE
 - 节点任务
 ```
 // ===========================获取锁并执行TASK===========================
-// 获取锁
-CALL apoc.load.jdbc('jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC','SELECT task_lock FROM ONGDB_TASK_CHECK_POINT_LOCK WHERE task_lock=0 AND hcode=?',['HGRAPHTASK(HORGGuaranteeV001)-[担保]->(HORGGuaranteeV001)']) YIELD row AS lock WITH lock
-// 锁定
-CALL apoc.load.jdbcUpdate('jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC','UPDATE ONGDB_TASK_CHECK_POINT_LOCK SET task_lock=1 WHERE hcode=?',['HGRAPHTASK(HORGGuaranteeV001)-[担保]->(HORGGuaranteeV001)']) YIELD row WITH lock
+// 获取任务锁并锁定任务
+CALL apoc.load.jdbcUpdate('jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC','UPDATE ONGDB_TASK_CHECK_POINT_LOCK updateLock INNER JOIN (SELECT task_lock,hcode FROM ONGDB_TASK_CHECK_POINT_LOCK selectLock WHERE task_lock=0 AND hcode=?) selectLock ON updateLock.hcode=selectLock.hcode SET updateLock.task_lock=1',['HGRAPHTASK(HORGGuaranteeV001)-[担保]->(HORGGuaranteeV001)']) YIELD row AS lock WHERE lock.count>0 WITH lock
 // 获取检查点时间【跑全量数据时修改CHECK_POINT的时间点为最早的一个时间即可】【数据量高于堆内存限制则必须使用数据分块方案】
 CALL apoc.load.jdbc('jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC','SELECT DATE_FORMAT(node_check_point,\'%Y-%m-%d %H:%i:%s\') AS check_point,DATE_FORMAT(NOW(),\'%Y-%m-%d %H:%i:%s\') AS currentTime FROM ONGDB_TASK_CHECK_POINT WHERE hcode=?',['HGRAPHTASK(HORGGuaranteeV001)-[担保]->(HORGGuaranteeV001)']) YIELD row WITH apoc.text.join(['\'',row.check_point,'\''], '') AS check_point,row.currentTime AS currentTime,row.check_point AS rawCheckPoint
 // 数据分块-从数据库获取检查点之后最大最小自增ID
@@ -183,10 +198,8 @@ CALL apoc.load.jdbcUpdate('jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.c
 - 关系任务
 ```
 // ===========================获取锁并执行TASK===========================
-// 获取锁
-CALL apoc.load.jdbc('jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC','SELECT task_lock FROM ONGDB_TASK_CHECK_POINT_LOCK WHERE task_lock=0 AND hcode=?',['HGRAPHTASK(HORGGuaranteeV001)-[担保]->(HORGGuaranteeV001)']) YIELD row AS lock WITH lock
-// 锁定
-CALL apoc.load.jdbcUpdate('jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC','UPDATE ONGDB_TASK_CHECK_POINT_LOCK SET task_lock=1 WHERE hcode=?',['HGRAPHTASK(HORGGuaranteeV001)-[担保]->(HORGGuaranteeV001)']) YIELD row WITH lock
+// 获取任务锁并锁定任务
+CALL apoc.load.jdbcUpdate('jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC','UPDATE ONGDB_TASK_CHECK_POINT_LOCK updateLock INNER JOIN (SELECT task_lock,hcode FROM ONGDB_TASK_CHECK_POINT_LOCK selectLock WHERE task_lock=0 AND hcode=?) selectLock ON updateLock.hcode=selectLock.hcode SET updateLock.task_lock=1',['HGRAPHTASK(HORGGuaranteeV001)-[担保]->(HORGGuaranteeV001)']) YIELD row AS lock WHERE lock.count>0 WITH lock
 // 获取检查点时间【跑全量数据时修改CHECK_POINT的时间点为最早的一个时间即可】【数据量高于堆内存限制则必须使用数据分块方案】
 CALL apoc.load.jdbc('jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC','SELECT DATE_FORMAT(rel_check_point,\'%Y-%m-%d %H:%i:%s\') AS check_point FROM ONGDB_TASK_CHECK_POINT WHERE hcode=?',['HGRAPHTASK(HORGGuaranteeV001)-[担保]->(HORGGuaranteeV001)']) YIELD row WITH apoc.text.join(['\'',row.check_point,'\''], '') AS check_point,row.check_point AS rawCheckPoint
 // 数据分块-从数据库获取检查点之后最大最小自增ID
@@ -206,3 +219,4 @@ CALL apoc.do.case([batchFailedSize>0,'CALL apoc.load.jdbcUpdate(\'jdbc:mysql://d
 // 释放锁【TASK结束运行释放锁操作】【数据分块处设置一个默认分块，保证释放锁操作顺利执行】
 CALL apoc.load.jdbcUpdate('jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC','UPDATE ONGDB_TASK_CHECK_POINT_LOCK SET task_lock=0 WHERE hcode=?',['HGRAPHTASK(HORGGuaranteeV001)-[担保]->(HORGGuaranteeV001)']) YIELD row AS releaseLock RETURN releaseLock,value,batchFailedSize,rawCheckPoint;
 ```
+
