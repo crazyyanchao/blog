@@ -213,3 +213,10 @@ UNWIND nameList AS companyName
 CALL custom.org.basicinfo(companyName) YIELD scope,hcode,name,Tag,caihuiCode,windCode,reg_capital,legal_person_repr,establishment_date,holdShareController,holdShareControllerRatio RETURN scope,hcode,name,apoc.convert.fromJsonList(Tag) AS tag,caihuiCode,windCode,reg_capital,legal_person_repr,establishment_date,holdShareController,holdShareControllerRatio
 ```
 
+### 自定义函数与过程存储位置
+- 新增属性
+```
+apoc.custom
+apoc.custom.update
+```
+
