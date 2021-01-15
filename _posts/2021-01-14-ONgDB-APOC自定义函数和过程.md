@@ -213,6 +213,22 @@ UNWIND nameList AS companyName
 CALL custom.org.basicinfo(companyName) YIELD scope,hcode,name,Tag,caihuiCode,windCode,reg_capital,legal_person_repr,establishment_date,holdShareController,holdShareControllerRatio RETURN scope,hcode,name,apoc.convert.fromJsonList(Tag) AS tag,caihuiCode,windCode,reg_capital,legal_person_repr,establishment_date,holdShareController,holdShareControllerRatio
 ```
 
+### 使用案例四
+- 中文函数名
+```
+CALL apoc.custom.asFunction(
+  '数字打印函数',
+  'RETURN $input*2 as answer',
+  'long',
+  [['input','number']]
+);
+RETURN custom.数字打印函数(12) AS value;
+```
+- 中文过程名
+```
+CALL apoc.custom.asProcedure('数字打印过程','RETURN $input as answer','read',[['answer','number']],[['input','int','42']]);
+CALL custom.数字打印过程(12) YIELD answer RETURN answer;
+```
 ### 自定义函数与过程存储位置
 - 新增属性
 ```
