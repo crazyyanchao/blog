@@ -132,6 +132,16 @@ CALL apoc.custom.removeProcedure('task.build.graph.from')
 @param {etl_max_min} 从ETL源表加载最大最小自增ID，源库必须要有自增ID和自动更新时间 SELECT MIN(huid) AS min,MAX(huid) AS max FROM HBondOrg WHERE hupdatetime>=? AND type=\\\'发行证券\\\'
 // {etl_sql}:使用七个转义符号
 // {etl_max_min}:使用三个转义符号
+
+@param {merge_label}  【必选】合并节点的数据模型标签
+@param {merge_field}  【必选】【一般为HCODE】合并节点的字段，该标签下的唯一属性
+@param {child_labels} 【可选】STRING类型的JSON数组
+@param {jdbc_etl_url} 【必选】【支持MySQL、Oracle、SqlServer】
+@param {etl_sql} 【必选】【必须包含{merge_field}字段】【SQL必须包含自动更新时间和自增ID】【单引号必须使用七个转义符号】 SELECT org_hcode AS hcode,org_name AS name,credit_code,label,CONVERT(DATE_FORMAT(hcreatetime,\\\'%Y%m%d%H%i%S\\\'),UNSIGNED INTEGER) AS hcreatetime,CONVERT(DATE_FORMAT(hupdatetime,\\\'%Y%m%d%H%i%S\\\'),UNSIGNED INTEGER) AS hupdatetime,hisvalid,create_by,update_by FROM HBondOrg WHERE hupdatetime>=? AND huid>=? AND huid<=? AND type=\\\'发行证券\\\'
+@param {jdbc_task_url} 【必选】【任务状态表状态锁表位置默认只支持MySQL】【提前在连接指定的库中创建ONGDB_TASK_CHECK_POINT和ONGDB_TASK_CHECK_POINT_LOCK表】
+@param {task_hcode} 【必选】【格式要求：HGRAPHTASK(FromLabel)-[REL]->(ToLabel)】
+@param {etl_max_min} 【必选】【必须包含max和min字段】【必须包含自动更新时间字段】【单引号必须使用三个转义符号】从ETL源表加载最大最小自增ID，源库必须要有自增ID和自动更新时间 SELECT MIN(huid) AS min,MAX(huid) AS max FROM HBondOrg WHERE hupdatetime>=? AND type=\\\'发行证券\\\'
+
 WITH 'HBondOrg' AS merge_label,'hcode' AS merge_field,NULL AS child_labels,'jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC' AS jdbc_etl_url,'SELECT org_hcode AS hcode,org_name AS name,credit_code,label,CONVERT(DATE_FORMAT(hcreatetime,\\\\\\\'%Y%m%d%H%i%S\\\\\\\'),UNSIGNED INTEGER) AS hcreatetime,CONVERT(DATE_FORMAT(hupdatetime,\\\\\\\'%Y%m%d%H%i%S\\\\\\\'),UNSIGNED INTEGER) AS hupdatetime,hisvalid,create_by,update_by FROM HBondOrg WHERE hupdatetime>=? AND huid>=? AND huid<=? AND type=\\\\\\\'发行证券\\\\\\\'' AS etl_sql,'jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC' AS jdbc_task_url,'HGRAPHTASK(HBondOrg)-[发行证券]->(HEventBond)' AS task_hcode,'SELECT MIN(huid) AS min,MAX(huid) AS max FROM HBondOrg WHERE hupdatetime>=? AND type=\\\'发行证券\\\'' AS etl_max_min
 CALL custom.task.build.graph.from(merge_label,merge_field,child_labels,jdbc_etl_url,etl_sql,jdbc_task_url,task_hcode,etl_max_min) YIELD procedure_name,cypher_task RETURN procedure_name,cypher_task
 ```
