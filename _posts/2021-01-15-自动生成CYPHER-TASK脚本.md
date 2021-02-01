@@ -56,9 +56,9 @@ rel-担保.cql
 ### 异构图-TASK脚本生成
 - 使用CALL apoc.custom.asProcedure生成下面三个过程
 ```
-CALL custom.task.build.graph.from({merge_label},{merge_field},{child_labels},{jdbc_etl_url},{etl_sql},{jdbc_task_url},{task_hcode},{max_min_sql})
-CALL custom.task.build.graph.to({merge_label},{merge_field},{child_labels},{jdbc_etl_url},{etl_sql},{jdbc_task_url},{task_hcode},{max_min_sql})
-CALL custom.task.build.graph.rel({matchFrom_label},{matchFrom_field},{matchTo_label},{matchTo_field},{merge_rel_type},{jdbc_etl_url},{etl_sql},{jdbc_task_url},{task_hcode},{max_min_sql})
+CALL custom.task.build.graph.from({merge_label},{merge_field},{child_labels},{jdbc_etl_url},{etl_sql},{jdbc_task_url},{task_hcode},{max_min_sql}) YIELD procedure_name,cypher_task RETURN procedure_name,cypher_task
+CALL custom.task.build.graph.to({merge_label},{merge_field},{child_labels},{jdbc_etl_url},{etl_sql},{jdbc_task_url},{task_hcode},{max_min_sql}) YIELD procedure_name,cypher_task RETURN procedure_name,cypher_task
+CALL custom.task.build.graph.rel({matchFrom_label},{matchFrom_field},{matchTo_label},{matchTo_field},{merge_rel_type},{jdbc_etl_url},{etl_sql},{jdbc_task_url},{task_hcode},{max_min_sql}) YIELD procedure_name,cypher_task RETURN procedure_name,cypher_task
 ```
 - 以一个异构图为例：(HBondOrg)-[:发行证券]->(HEventBond)
 - 使用CALL custom.task.build.graph.*()生成下面三个过程
@@ -171,7 +171,7 @@ CALL custom.task.build.graph.to(merge_label,merge_field,child_labels,jdbc_etl_ur
 ```
 
 ### 关系CYPHER-TASK自动生成
-- REL-CYPHER-TASK生成【生成`发行证券`关系】
+- REL-CYPHER-TASK生成
 ```
 @param {matchFrom_label}-匹配FROM节点的标签
 @param {matchFrom_field}-匹配FROM节点的属性字段【一般为唯一性属性字段】
@@ -183,10 +183,10 @@ CALL custom.task.build.graph.to(merge_label,merge_field,child_labels,jdbc_etl_ur
 @param {jdbc_task_url}-任务状态表状态锁表位置默认只支持MySQL
 @param {task_hcode}-HGRAPHTASK(FromLabel)-[RelaName]->(ToLabel)
 @param {max_min_sql}-从ETL源表加载最大最小自增ID，源库必须要有自增ID和自动更新时间
-WITH 'HBondOrg' AS matchFrom_label,'hcode' AS matchFrom_field,'HEventBond' AS matchTo_label,'hcode' AS matchTo_field,'发行证券' AS merge_rel_type,'jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC' AS jdbc_etl_url,'SELECT hcode,name,data_source,CONVERT(DATE_FORMAT(hcreatetime,\'%Y%m%d%H%i%S\'),UNSIGNED INTEGER) AS hcreatetime,CONVERT(DATE_FORMAT(hupdatetime,\'%Y%m%d%H%i%S\'),UNSIGNED INTEGER) AS hupdatetime,hisvalid,create_by,update_by FROM HBondOrg WHERE hupdatetime>=? AND huid>=? AND huid<=? AND type=\'发行证券\'' AS etl_sql,'jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC' AS jdbc_task_url,'HGRAPHTASK(HBondOrg)-[发行证券]->(HEventBond)' AS task_hcode,'SELECT MIN(huid) AS min,MAX(huid) AS max FROM HBondOrg WHERE hupdatetime>=? AND type=\'发行证券\'' AS max_min_sql
+WITH 'HBondOrg' AS matchFrom_label,'hcode' AS matchFrom_field,'HEventBond' AS matchTo_label,'hcode' AS matchTo_field,'发行证券' AS merge_rel_type,'jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC' AS jdbc_etl_url,'SELECT hcode AS `to`,org_hcode AS `from`,data_source,CONVERT(DATE_FORMAT(hcreatetime,\'%Y%m%d%H%i%S\'),UNSIGNED INTEGER) AS hcreatetime,CONVERT(DATE_FORMAT(hupdatetime,\'%Y%m%d%H%i%S\'),UNSIGNED INTEGER) AS hupdatetime,hisvalid,create_by,update_by FROM HBondOrg WHERE hupdatetime>=? AND huid>=? AND huid<=? AND type=\'发行证券\'' AS etl_sql,'jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC' AS jdbc_task_url,'HGRAPHTASK(HBondOrg)-[发行证券]->(HEventBond)' AS task_hcode,'SELECT MIN(huid) AS min,MAX(huid) AS max FROM HBondOrg WHERE hupdatetime>=? AND type=\'发行证券\'' AS max_min_sql
 CALL custom.task.build.graph.rel(matchFrom_label,matchFrom_field,matchTo_label,matchTo_field,merge_rel_type,jdbc_etl_url,etl_sql,jdbc_task_url,task_hcode,max_min_sql) YIELD procedure_name,cypher_task RETURN procedure_name,cypher_task
 ```
-- REL-CYPHER-TASK生成
+- REL-CYPHER-TASK生成【生成`发行证券`关系】
 ```
 CALL custom.task.rel.发行证券.HGRAPHTASK_HBondOrg_发行证券_HEventBond_()
 ```
@@ -226,7 +226,7 @@ WITH 'HORGGuaranteeV003' AS merge_label,'hcode' AS merge_field,NULL AS child_lab
 CALL custom.task.build.graph.from(merge_label,merge_field,child_labels,jdbc_etl_url,etl_sql,jdbc_task_url,task_hcode,max_min_sql) YIELD procedure_name,cypher_task RETURN procedure_name,cypher_task
 ```
 ### 关系CYPHER-TASK自动生成
-- REL-CYPHER-TASK生成【生成`担保`关系】
+- REL-CYPHER-TASK生成
 ```
 @param {matchFrom_label}-匹配FROM节点的标签
 @param {matchFrom_field}-匹配FROM节点的属性字段【一般为唯一性属性字段】
@@ -241,7 +241,7 @@ CALL custom.task.build.graph.from(merge_label,merge_field,child_labels,jdbc_etl_
 WITH 'HORGGuaranteeV003' AS matchFrom_label,'hcode' AS matchFrom_field,'HORGGuaranteeV003' AS matchTo_label,'hcode' AS matchTo_field,'担保' AS merge_rel_type,'jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC' AS jdbc_etl_url,'SELECT `from`,`to`,guarantee_detail,guarantee_detail_size,CONVERT(DATE_FORMAT(hcreatetime,\'%Y%m%d%H%i%S\'),UNSIGNED INTEGER) AS hcreatetime,CONVERT(DATE_FORMAT(hupdatetime,\'%Y%m%d%H%i%S\'),UNSIGNED INTEGER) AS hupdatetime,hisvalid,create_by,update_by FROM HORGGuarantee_GuarV003 WHERE hupdatetime>=? AND huid>=? AND huid<=?' AS etl_sql,'jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC' AS jdbc_task_url,'HGRAPHTASK(HORGGuaranteeV003)-[担保]->(HORGGuaranteeV003)' AS task_hcode,'SELECT MIN(huid) AS min,MAX(huid) AS max FROM HORGGuarantee_GuarV003 WHERE hupdatetime>=?' AS max_min_sql
 CALL custom.task.build.graph.rel(matchFrom_label,matchFrom_field,matchTo_label,matchTo_field,merge_rel_type,jdbc_etl_url,etl_sql,jdbc_task_url,task_hcode,max_min_sql) YIELD procedure_name,cypher_task RETURN procedure_name,cypher_task
 ```
-- REL-CYPHER-TASK生成
+- REL-CYPHER-TASK生成【生成`担保`关系】
 ```
 CALL custom.task.rel.担保.HGRAPHTASK_HORGGuaranteeV003_担保_HORGGuaranteeV003_()
 ```
