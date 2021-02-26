@@ -1,9 +1,9 @@
 ---
-title: 自动生成时序JSON-REL-CYPHER-TASK脚本
+title: 自动生成CYPHER-TASK脚本二
 tags: [ONgDB,Cypher,SQL,MySQL]
 author: Yc-Ma
 show_author_profile: true
-key: 2021-02-01-自动生成时序JSON-REL-CYPHER-TASK脚本
+key: 2021-02-04-自动生成CYPHER-TASK脚本二
 pageview: true
 ---
 
