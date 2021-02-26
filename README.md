@@ -1,1 +1,1 @@
-# Yc-Ma Blog commit
+# Yc-Ma Blog
