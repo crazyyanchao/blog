@@ -82,4 +82,3 @@ CALL custom.sec.info(security_code) YIELD name,hcode,credit_code,labels WITH sec
 CALL apoc.load.jdbcUpdate('jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC','UPDATE UIDSRefDataSet SET hcode=?,name=?,credit_code=?,label=? WHERE security_code=?',[name,hcode,credit_code,labels,security_code]) YIELD row RETURN row
 ```
 
-
