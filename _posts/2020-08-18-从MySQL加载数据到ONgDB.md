@@ -1,6 +1,6 @@
 ---
 title: 从MySQL加载数据到ONgDB
-tags: [ONgDB,MySQL]
+tags: [ONgDB,MySQL,Neo4j]
 author: Yc-Ma
 show_author_profile: true
 key: 2020-08-18-从MySQL加载数据到ONgDB

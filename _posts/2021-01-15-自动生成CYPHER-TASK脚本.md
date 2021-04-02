@@ -1,6 +1,6 @@
 ---
 title: 自动化生成CYPHER-TASK脚本
-tags: [ONgDB,Cypher,SQL,MySQL]
+tags: [ONgDB,Cypher,SQL,MySQL,Neo4j]
 author: Yc-Ma
 show_author_profile: true
 key: 2021-01-15-自动化生成CYPHER-TASK脚本

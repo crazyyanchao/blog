@@ -1,6 +1,6 @@
 ---
 title: Cypher实现通过GraphQL更新MySQL中数据
-tags: [ONgDB,Cypher,SQL,MySQL,GraphQL]
+tags: [ONgDB,Cypher,SQL,MySQL,GraphQL,Neo4j]
 author: Yc-Ma
 show_author_profile: true
 key: 2021-03-10-Cypher实现通过GraphQL更新MySQL中数据
