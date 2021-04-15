@@ -27,7 +27,7 @@ key: page-about
 ---
 
 ## Yanchao Ma
-![avatar](https://media.licdn.cn/dms/image/C5103AQGqiqC6W7qg2g/profile-displayphoto-shrink_200_200/0/1586425318873?e=1623888000&v=beta&t=M5AyPgaLxf5TKgVKykv87imfpn16f1B-vL0tnVW99OI)
+![avatar](https://avatars.githubusercontent.com/u/19403898?s=400&u=7b919bdae0c7ffc6c659981bab439138e0e6ed99&v=4)
 
 ## Goals | 个人目标
 有创意地应用科学定律，来系统化地解决现实问题。
