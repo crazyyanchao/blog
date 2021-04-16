@@ -31,6 +31,7 @@ key: page-about
 
 ## Goals | 个人目标
 有创意地应用科学定律，来系统化地解决现实问题。
+![blog-logo](https://img-blog.csdnimg.cn/20210416130349436.jpg)
 
 ## Contact | 联系方式
 
@@ -38,7 +39,7 @@ key: page-about
 
 - 微信公众号：马超的博客
 
-![Qr-code-for-public-account](https://img-blog.csdnimg.cn/20201207192614699.jpg#pic_left)
+![Qr-code-for-public-account](https://img-blog.csdnimg.cn/20201207192614699.jpg)
 
 ## Skills | 主要技能
 - | Neo4j认证技术专家 | 大数据架构工程师 |
