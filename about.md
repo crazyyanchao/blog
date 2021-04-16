@@ -62,7 +62,7 @@ key: page-about
 如果你有任何问题，请给我发送邮件：[yanchaoma@foxmail.com](https://mail.qq.com/)
 
 ## Blog Logo | 博客图片水印
-![blog-logo](https://img-blog.csdnimg.cn/20210416130349436.jpg)
+![blog-logo](https://img-blog.csdnimg.cn/20210416175441563.jpg)
 
 ## Some Links | 相关链接
 - [About This Blog](https://crazyyanchao.github.io/blog/2020/01/01/%E5%85%B3%E4%BA%8E%E6%AD%A4%E5%8D%9A%E5%AE%A2.html)
