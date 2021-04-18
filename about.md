@@ -62,11 +62,13 @@ key: page-about
 如果你有任何问题，请给我发送邮件：[yanchaoma@foxmail.com](https://mail.qq.com/)
 
 ## Blog Slogan | 博客文章模板
-- WeChat-封面Slogan
+- Blog-封面Slogan
 ![package-blog-logo](https://img-blog.csdnimg.cn/20210418163634832.jpg)
-- WeChat-开篇Slogan
+
+- Blog-开篇Slogan
 ![start-blog-logo](https://img-blog.csdnimg.cn/20210418163651449.jpg)
-- WeChat-结尾Slogan
+
+- Blog-结尾Slogan
 ![end-blog-logo](https://img-blog.csdnimg.cn/20210418163715965.gif)
 
 ## Some Links | 相关链接
