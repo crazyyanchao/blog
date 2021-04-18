@@ -38,7 +38,7 @@ key: page-about
 
 - 微信公众号：马超的博客
 
-![Qr-code-for-public-account](https://img-blog.csdnimg.cn/20201207192614699.jpg)
+![Qr-code-for-public-account](https://img-blog.csdnimg.cn/20210418164236676.jpg)
 
 ## Skills | 主要技能
 - | Neo4j认证技术专家 | 大数据架构工程师 |
@@ -61,8 +61,10 @@ key: page-about
 
 如果你有任何问题，请给我发送邮件：[yanchaoma@foxmail.com](https://mail.qq.com/)
 
-## Blog Logo | 博客图片水印
-![blog-logo](https://img-blog.csdnimg.cn/20210416175441563.jpg)
+## Blog Slogan | 博客文章模板
+![package-blog-logo](https://img-blog.csdnimg.cn/20210418163634832.jpg)
+![start-blog-logo](https://img-blog.csdnimg.cn/20210418163651449.jpg)
+![end-blog-logo](https://img-blog.csdnimg.cn/20210418163715965.gif)
 
 ## Some Links | 相关链接
 - [About This Blog](https://crazyyanchao.github.io/blog/2020/01/01/%E5%85%B3%E4%BA%8E%E6%AD%A4%E5%8D%9A%E5%AE%A2.html)
