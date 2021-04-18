@@ -34,9 +34,7 @@ key: page-about
 
 ## Contact | 联系方式
 
-| [Linkedin](https://www.linkedin.com/in/yanchao-ma-0624b3b7/) | [CSDN](https://yc-ma.blog.csdn.net) | [GitHubIO](https://crazyyanchao.github.io/blog) | [GitHub](https://github.com/crazyyanchao) |
-
-- 微信公众号：马超的博客
+| [Linkedin](https://www.linkedin.com/in/yanchao-ma-0624b3b7/) | [CSDN](https://yc-ma.blog.csdn.net) | [GitHubIO](https://crazyyanchao.github.io/blog) | [GitHub](https://github.com/crazyyanchao) | [微信公众号](https://img-blog.csdnimg.cn/20210418164236676.jpg) |
 
 ![Qr-code-for-public-account](https://img-blog.csdnimg.cn/20210418164236676.jpg)
 
