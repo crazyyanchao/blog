@@ -34,11 +34,9 @@ key: page-about
 
 ## Contact | 联系方式
 
-| [Linkedin](https://www.linkedin.com/in/yanchao-ma-0624b3b7/) | [CSDN](https://yc-ma.blog.csdn.net) | [GitHubIO](https://crazyyanchao.github.io/blog) | [GitHub](https://github.com/crazyyanchao) |
+| [Linkedin](https://www.linkedin.com/in/yanchao-ma-0624b3b7/) | [CSDN](https://yc-ma.blog.csdn.net) | [GitHubIO](https://crazyyanchao.github.io/blog) | [GitHub](https://github.com/crazyyanchao) | [微信公众号](https://img-blog.csdnimg.cn/20210418164236676.jpg) |
 
-- 微信公众号：马超的博客
-
-![Qr-code-for-public-account](https://img-blog.csdnimg.cn/20201207192614699.jpg#pic_left)
+![Qr-code-for-public-account](https://img-blog.csdnimg.cn/20210418164236676.jpg)
 
 ## Skills | 主要技能
 - | Neo4j认证技术专家 | 大数据架构工程师 |
@@ -60,6 +58,16 @@ key: page-about
 感谢计算机给我们提供了一个完美的试验场，这里没有太多的约束，就像我的世界一样，是一片自由的乌托邦之地。在这里，我们可以让想象力 :thought_balloon: 自由驰骋 :rocket:，让计算机完成我们想到的事。我认为，将计算机世界和现实世界连接起来 :computer: :link: :earth_asia: 是我等程序员的使命。
 
 如果你有任何问题，请给我发送邮件：[yanchaoma@foxmail.com](https://mail.qq.com/)
+
+## Blog Slogan | 博客文章模板
+- Blog-封面Slogan
+![package-blog-logo](https://img-blog.csdnimg.cn/20210418163634832.jpg)
+
+- Blog-开篇Slogan
+![start-blog-logo](https://img-blog.csdnimg.cn/20210418163651449.jpg)
+
+- Blog-结尾Slogan
+![end-blog-logo](https://img-blog.csdnimg.cn/20210418163715965.gif)
 
 ## Some Links | 相关链接
 - [About This Blog](https://crazyyanchao.github.io/blog/2020/01/01/%E5%85%B3%E4%BA%8E%E6%AD%A4%E5%8D%9A%E5%AE%A2.html)
