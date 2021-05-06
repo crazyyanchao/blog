@@ -26,7 +26,7 @@ titles:
 key: page-about
 ---
 
-## Yanchao Ma
+## Yanchao Ma | YcMa
 ![avatar](https://avatars.githubusercontent.com/u/19403898?s=400&u=7b919bdae0c7ffc6c659981bab439138e0e6ed99&v=4)
 
 ## Goals | 个人目标
@@ -36,8 +36,11 @@ key: page-about
 
 | [Linkedin](https://www.linkedin.com/in/yanchao-ma-0624b3b7/) | [CSDN](https://yc-ma.blog.csdn.net) | [GitHubIO](https://crazyyanchao.github.io/blog) | [GitHub](https://github.com/crazyyanchao) | [微信公众号](https://img-blog.csdnimg.cn/20210418164236676.jpg) |
 
+## Github Info | Github面板
+![Github-Info](https://camo.githubusercontent.com/0328a440dbb36b46a1e70acf83404d740cb48e17acb9f452a4097bcbeecb26eb/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d6372617a7979616e6368616f2673686f775f69636f6e733d747275652669636f6e5f636f6c6f723d38303541443526746578745f636f6c6f723d3265646661332662675f636f6c6f723d66666666666626686964655f7469746c653d74727565267469746c655f636f6c6f723d323061306666)
+
 ## Skills | 主要技能
-- | Neo4j认证技术专家 | 大数据架构工程师 |
+- | Neo4j认证技术专家 | 大数据架构工程师 | 图数据工程师 |
 - | Java | Shell | Python | Scala |
 - | Neo4j Ecosystem | ONgDB Ecosystem | MySQL | SQL | Cypher |
 - | Elasticsearch Ecosystem | TensorFlow™ | Hadoop Ecosystem | Spark Ecosystem|
@@ -47,8 +50,6 @@ key: page-about
 - | Windows | Linux |
 
 ## About Me | 关于我
-![Github-Info](https://camo.githubusercontent.com/0328a440dbb36b46a1e70acf83404d740cb48e17acb9f452a4097bcbeecb26eb/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d6372617a7979616e6368616f2673686f775f69636f6e733d747275652669636f6e5f636f6c6f723d38303541443526746578745f636f6c6f723d3265646661332662675f636f6c6f723d66666666666626686964655f7469746c653d74727565267469746c655f636f6c6f723d323061306666)
-
 你们好，我叫Tony.Ma，这是我的博客。
 
 我崇尚 Geek 精神与开源文化 :octocat:，喜欢简洁、优美、模块化的代码。爱折腾，折腾系统，折腾软件，折腾语言，折腾框架……生命不息，折腾不止。:muscle:
@@ -68,9 +69,6 @@ key: page-about
 
 - Blog-结尾Slogan
 ![end-blog-logo](https://img-blog.csdnimg.cn/20210418163715965.gif)
-
-- WeChat Public Account
-![Qr-code-for-public-account](https://img-blog.csdnimg.cn/20210418164236676.jpg)
 
 ## Some Links | 相关链接
 - [About This Blog](https://crazyyanchao.github.io/blog/2020/01/01/%E5%85%B3%E4%BA%8E%E6%AD%A4%E5%8D%9A%E5%AE%A2.html)
