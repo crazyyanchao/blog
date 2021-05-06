@@ -26,7 +26,7 @@ titles:
 key: page-about
 ---
 
-## Yanchao Ma | YcMa
+## YcMa
 ![avatar](https://avatars.githubusercontent.com/u/19403898?s=400&u=7b919bdae0c7ffc6c659981bab439138e0e6ed99&v=4)
 
 ## Goals | 个人目标
