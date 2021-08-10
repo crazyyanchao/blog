@@ -25,11 +25,12 @@ Created on Tue Oct 27 15:13:46 2020
 """
 import cypher
 con = "http://ongdb:datalab%pro@datalab.ongdb.http.server/db/data"
-#con = "http://ongdb:datalab%pro@10.20.13.200:7474/db/data"
+#con = "http://ongdb:datalab%pro@10.20.13.200/db/data"
 query = """
     MATCH p=()-->()-->() RETURN p LIMIT 100
 """
 comp_list = cypher.run(query, conn=con)
 ```
+
 
 
