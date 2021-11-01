@@ -47,4 +47,7 @@ wget --no-check-certificate --quiet \
    'http://10.20.13.200/db/data/transaction/commit'
 ```
 
-
+### Shell - curl
+```
+curl -u ongdb:datalab%pro -d '{"statements": [{"statement": "RETURN 2 AS num","resultDataContents": ["row","graph"]}]}' -H 'Content-Type: application/json' -X POST http://10.20.13.200/db/data/transaction/commit
+```
