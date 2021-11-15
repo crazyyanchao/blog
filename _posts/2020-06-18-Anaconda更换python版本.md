@@ -1,9 +1,9 @@
 ---
-title: Anacode更换python版本
-tags: [Python,Anacode]
+title: Anaconda更换python版本
+tags: [Python,Anaconda]
 author: Yc-Ma
 show_author_profile: true
-key: 2020-06-18-Anacode更换python版本
+key: 2020-06-18-Anaconda更换python版本
 pageview: true
 ---
 
