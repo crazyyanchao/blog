@@ -11,6 +11,15 @@ Here's the table of contents:
 1. TOC
 {:toc}
 
+
+## 变量冲突调整
+```
+文本中下列变量在使用时去掉双下划线`--`【因为与GitHubIO.blog编译冲突】
+{--{merge_field}
+{--{matchFrom_field}
+{--{matchTo_field}
+```
+
 ~~## 版本V-1.0.1~~
 ```
 支持自定义设置batch size大小！
