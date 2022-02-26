@@ -60,19 +60,6 @@ key: page-about
 <img alt="crazyyanchao's Github Stats" height='220' src="https://github-readme-stats.vercel.app/api/top-langs/?username=crazyyanchao">
 </p>
 
-## Github Info | Github面板
-![Github-Info](https://camo.githubusercontent.com/0328a440dbb36b46a1e70acf83404d740cb48e17acb9f452a4097bcbeecb26eb/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d6372617a7979616e6368616f2673686f775f69636f6e733d747275652669636f6e5f636f6c6f723d38303541443526746578745f636f6c6f723d3265646661332662675f636f6c6f723d66666666666626686964655f7469746c653d74727565267469746c655f636f6c6f723d323061306666)
-
-## Skills
-- | Neo4j认证技术专家 | 大数据架构工程师 | 图数据工程师 |
-- | Java | Shell | Python | Scala |
-- | Neo4j Ecosystem | ONgDB Ecosystem | MySQL | SQL | Cypher |
-- | Elasticsearch Ecosystem | TensorFlow™ | Hadoop Ecosystem | Spark Ecosystem|
-- | Spring Boot | Data Visualization |
-- | Maven | Git |
-- | IntelliJ IDEA | Slack |VNote | Sublime Text | Postman | Navicat | Xshell | Chrome |
-- | Windows | Linux |
-
 ## About
 你们好，我叫Tony.Ma，这是我的博客。
 
