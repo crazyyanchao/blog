@@ -54,15 +54,11 @@ key: page-about
 
 创意化应用科学定律，系统化解决现实问题！
 
-## Github Info | Github面板
+## 𝗦𝘁𝗮𝘁𝘀
 <p align="left">
 <img alt="crazyyanchao's Github Stats" height='220' src="https://github-readme-stats.vercel.app/api?username=crazyyanchao&show_icons=true&include_all_commits=true">
 <img alt="crazyyanchao's Github Stats" height='220' src="https://github-readme-stats.vercel.app/api/top-langs/?username=crazyyanchao">
 </p>
-
-
-## YcMa
-![avatar](https://avatars.githubusercontent.com/u/19403898?s=400&u=7b919bdae0c7ffc6c659981bab439138e0e6ed99&v=4)
 
 ## Github Info | Github面板
 ![Github-Info](https://camo.githubusercontent.com/0328a440dbb36b46a1e70acf83404d740cb48e17acb9f452a4097bcbeecb26eb/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d6372617a7979616e6368616f2673686f775f69636f6e733d747275652669636f6e5f636f6c6f723d38303541443526746578745f636f6c6f723d3265646661332662675f636f6c6f723d66666666666626686964655f7469746c653d74727565267469746c655f636f6c6f723d323061306666)
