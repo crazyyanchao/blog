@@ -27,6 +27,7 @@ key: page-about
 ---
 
 <h1 align="center"> Hello! 👋  I'm <a href="https://github.com/crazyyanchao">马超</a>!</h1>
+<h1 align="center"><a herf="https://avatars.githubusercontent.com/u/19403898?s=400&u=7b919bdae0c7ffc6c659981bab439138e0e6ed99&v=4">
 <h1 align="center">a 𝑫𝒂𝒕𝒂 𝑬𝒏𝒈𝒊𝒏𝒆𝒆𝒓  </h1>
 
 <p align="center">
@@ -62,13 +63,6 @@ key: page-about
 
 ## YcMa
 ![avatar](https://avatars.githubusercontent.com/u/19403898?s=400&u=7b919bdae0c7ffc6c659981bab439138e0e6ed99&v=4)
-
-## Goals | 个人目标
-有创意地应用科学定律，来系统化地解决现实问题。
-
-## Contact | 联系方式
-
-| [Linkedin](https://www.linkedin.com/in/yanchao-ma-0624b3b7/) | [CSDN](https://yc-ma.blog.csdn.net) | [GitHubIO](https://crazyyanchao.github.io/blog) | [GitHub](https://github.com/crazyyanchao) | [微信公众号](https://img-blog.csdnimg.cn/20210418164236676.jpg) |
 
 ## Github Info | Github面板
 ![Github-Info](https://camo.githubusercontent.com/0328a440dbb36b46a1e70acf83404d740cb48e17acb9f452a4097bcbeecb26eb/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d6372617a7979616e6368616f2673686f775f69636f6e733d747275652669636f6e5f636f6c6f723d38303541443526746578745f636f6c6f723d3265646661332662675f636f6c6f723d66666666666626686964655f7469746c653d74727565267469746c655f636f6c6f723d323061306666)
