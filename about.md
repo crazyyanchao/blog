@@ -70,5 +70,5 @@ key: page-about
 
 感谢计算机给我们提供了一个完美的试验场，这里没有太多的约束，就像我的世界一样，是一片自由的乌托邦之地。在这里，我们可以让想象力 :thought_balloon: 自由驰骋 :rocket:，让计算机完成我们想到的事。我认为，将计算机世界和现实世界连接起来 :computer: :link: :earth_asia: 是我等程序员的使命。
 
-如果你有任何问题，请给我发送邮件：[yanchaoma@foxmail.com](https://mail.qq.com/)
-
+## Contact
+如果您有任何问题，可以来我的博客[马超的博客](https://img-blog.csdnimg.cn/20210418163715965.gif)或者给我发送邮件：[yanchaoma@foxmail.com](https://mail.qq.com/)
