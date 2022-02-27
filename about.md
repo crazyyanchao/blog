@@ -44,7 +44,7 @@ key: page-about
   <strong><a href="https://gitee.com/yc-ma" style="color:#0969da">码云</a></strong>
 </p>
 
-<p align="center"><a href="https://img-blog.csdnimg.cn/20210418163715965.gif"> Visitor count<br><img src="https://profile-counter.glitch.me/crazyyanchao/count.svg" /></a></p>
+<p align="center"><a href="https://img-blog.csdnimg.cn/20210418163715965.gif" style="color:#0969da"> Visitor count<br><img src="https://profile-counter.glitch.me/crazyyanchao/count.svg" /></a></p>
 
 #  𝑊𝑒𝑙𝑐𝑜𝑚𝑒 𝑇𝑜 马超的博客
 <a href="https://alili.tech"><img src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" align="right" height="275" /></a>
