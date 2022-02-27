@@ -61,4 +61,5 @@ key: page-about
 创意化应用科学定律，系统化解决现实问题！
 
 ## 𝐀𝐛𝐨𝐮𝐭
-如果您有任何问题，可以来[我的博客](https://img-blog.csdnimg.cn/20210418163715965.gif)或者给我发送邮件：[yanchaoma@foxmail.com](https://mail.qq.com/)
+如果您有任何问题，可以来<font color=#0969da>[我的博客](https://img-blog.csdnimg.cn/20210418163715965.gif)</font>或者给我发送邮件：<font color=#0969da>[yanchaoma@foxmail.com](https://mail.qq.com/)</font>
+
