@@ -36,7 +36,12 @@ key: page-about
   <strong><a href="https://yc-ma.blog.csdn.net">CSDN</a></strong> |
   <strong><a href="https://www.linkedin.com/in/yanchao-ma-0624b3b7/">Linkedin</a></strong> |
   <strong><a href="https://crazyyanchao.github.io/blog">GitHubIO</a></strong>  |
-  <strong><a href="https://github.com/crazyyanchao">GitHub</a></strong>  
+  <strong><a href="https://github.com/crazyyanchao">GitHub</a></strong>  |
+  <strong><a href="https://www.zhihu.com/people/YanchaoMa">知乎</a></strong>  |
+  <strong><a href="https://space.bilibili.com/44763375">哔哩哔哩</a></strong>  |
+  <strong><a href="http://neo4j.com.cn/user/crazyyanchao">Neo4j中文社区</a></strong>  |
+  <strong><a href="http://www.demodashi.com/demo/13181.html">Demo大师</a></strong>  |
+  <strong><a href="https://gitee.com/yc-ma">码云</a></strong>
 </p>
 
 <p align="center"><a href="https://img-blog.csdnimg.cn/20210418163715965.gif"> Visitor count<br><img src="https://profile-counter.glitch.me/crazyyanchao/count.svg" /></a></p>
