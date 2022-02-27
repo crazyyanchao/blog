@@ -33,15 +33,15 @@ key: page-about
 
 <p align="center">
   <strong><a href="https://img-blog.csdnimg.cn/20210418163715965.gif" style="color:#0969da">公众号：马超的博客</a></strong> |
-  <strong><a href="https://yc-ma.blog.csdn.net" style="color:#0969da>CSDN</a></strong> |
-  <strong><a href="https://www.linkedin.com/in/yanchao-ma-0624b3b7/" style="color:#0969da>Linkedin</a></strong> |
-  <strong><a href="https://crazyyanchao.github.io/blog" style="color:#0969da>GitHubIO</a></strong>  |
-  <strong><a href="https://github.com/crazyyanchao" style="color:#0969da>GitHub</a></strong>  |
-  <strong><a href="https://www.zhihu.com/people/YanchaoMa" style="color:#0969da>知乎</a></strong>  |
-  <strong><a href="https://space.bilibili.com/44763375" style="color:#0969da>哔哩哔哩</a></strong>  |
-  <strong><a href="http://neo4j.com.cn/user/crazyyanchao" style="color:#0969da>Neo4j中文社区</a></strong>  |
-  <strong><a href="http://www.demodashi.com/demo/13181.html" style="color:#0969da>Demo大师</a></strong>  |
-  <strong><a href="https://gitee.com/yc-ma" style="color:#0969da>码云</a></strong>
+  <strong><a href="https://yc-ma.blog.csdn.net" style="color:#0969da">CSDN</a></strong> |
+  <strong><a href="https://www.linkedin.com/in/yanchao-ma-0624b3b7/" style="color:#0969da">Linkedin</a></strong> |
+  <strong><a href="https://crazyyanchao.github.io/blog" style="color:#0969da">GitHubIO</a></strong>  |
+  <strong><a href="https://github.com/crazyyanchao" style="color:#0969da">GitHub</a></strong>  |
+  <strong><a href="https://www.zhihu.com/people/YanchaoMa" style="color:#0969da">知乎</a></strong>  |
+  <strong><a href="https://space.bilibili.com/44763375" style="color:#0969da">哔哩哔哩</a></strong>  |
+  <strong><a href="http://neo4j.com.cn/user/crazyyanchao" style="color:#0969da">Neo4j中文社区</a></strong>  |
+  <strong><a href="http://www.demodashi.com/demo/13181.html" style="color:#0969da">Demo大师</a></strong>  |
+  <strong><a href="https://gitee.com/yc-ma" style="color:#0969da">码云</a></strong>
 </p>
 
 <p align="center"><a href="https://img-blog.csdnimg.cn/20210418163715965.gif"> Visitor count<br><img src="https://profile-counter.glitch.me/crazyyanchao/count.svg" /></a></p>
