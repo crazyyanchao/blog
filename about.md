@@ -32,7 +32,7 @@ key: page-about
 <h1 align="center">a 𝑫𝒂𝒕𝒂 𝑬𝒏𝒈𝒊𝒏𝒆𝒆𝒓  </h1>
 
 <p align="center">
-  <strong><a href="https://img-blog.csdnimg.cn/20210418163715965.gif">公众号：马超的博客</a></strong> |
+  <strong><a href="https://img-blog.csdnimg.cn/20210418163715965.gif" style="color:#0969da">公众号：马超的博客</a></strong> |
   <strong><a href="https://yc-ma.blog.csdn.net">CSDN</a></strong> |
   <strong><a href="https://www.linkedin.com/in/yanchao-ma-0624b3b7/">Linkedin</a></strong> |
   <strong><a href="https://crazyyanchao.github.io/blog">GitHubIO</a></strong>  |
