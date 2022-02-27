@@ -25,7 +25,7 @@ titles:
 key: page-about
 ---
 
-<h1 align="center"> Hello! 👋  I'm <a href="https://github.com/crazyyanchao" style="color:#0969da>马超</a>!</h1>
+<h1 align="center"> Hello! 👋  I'm <a href="https://github.com/crazyyanchao" style="color:#0969da">马超</a>!</h1>
 
 <h1 align="center"><img src="https://avatars.githubusercontent.com/u/19403898?s=400&u=7b919bdae0c7ffc6c659981bab439138e0e6ed99&v=4"></h1>
   
