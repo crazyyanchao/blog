@@ -25,7 +25,7 @@ titles:
 key: page-about
 ---
 
-<h1 align="center"> Hello! 👋  I'm <a href="https://github.com/crazyyanchao">马超</a>!</h1>
+<h1 align="center"> Hello! 👋  I'm <a href="https://github.com/crazyyanchao" style="color:#0969da>马超</a>!</h1>
 
 <h1 align="center"><img src="https://avatars.githubusercontent.com/u/19403898?s=400&u=7b919bdae0c7ffc6c659981bab439138e0e6ed99&v=4"></h1>
   
@@ -33,20 +33,20 @@ key: page-about
 
 <p align="center">
   <strong><a href="https://img-blog.csdnimg.cn/20210418163715965.gif" style="color:#0969da">公众号：马超的博客</a></strong> |
-  <strong><a href="https://yc-ma.blog.csdn.net">CSDN</a></strong> |
-  <strong><a href="https://www.linkedin.com/in/yanchao-ma-0624b3b7/">Linkedin</a></strong> |
-  <strong><a href="https://crazyyanchao.github.io/blog">GitHubIO</a></strong>  |
-  <strong><a href="https://github.com/crazyyanchao">GitHub</a></strong>  |
-  <strong><a href="https://www.zhihu.com/people/YanchaoMa">知乎</a></strong>  |
-  <strong><a href="https://space.bilibili.com/44763375">哔哩哔哩</a></strong>  |
-  <strong><a href="http://neo4j.com.cn/user/crazyyanchao">Neo4j中文社区</a></strong>  |
-  <strong><a href="http://www.demodashi.com/demo/13181.html">Demo大师</a></strong>  |
-  <strong><a href="https://gitee.com/yc-ma">码云</a></strong>
+  <strong><a href="https://yc-ma.blog.csdn.net" style="color:#0969da>CSDN</a></strong> |
+  <strong><a href="https://www.linkedin.com/in/yanchao-ma-0624b3b7/" style="color:#0969da>Linkedin</a></strong> |
+  <strong><a href="https://crazyyanchao.github.io/blog" style="color:#0969da>GitHubIO</a></strong>  |
+  <strong><a href="https://github.com/crazyyanchao" style="color:#0969da>GitHub</a></strong>  |
+  <strong><a href="https://www.zhihu.com/people/YanchaoMa" style="color:#0969da>知乎</a></strong>  |
+  <strong><a href="https://space.bilibili.com/44763375" style="color:#0969da>哔哩哔哩</a></strong>  |
+  <strong><a href="http://neo4j.com.cn/user/crazyyanchao" style="color:#0969da>Neo4j中文社区</a></strong>  |
+  <strong><a href="http://www.demodashi.com/demo/13181.html" style="color:#0969da>Demo大师</a></strong>  |
+  <strong><a href="https://gitee.com/yc-ma" style="color:#0969da>码云</a></strong>
 </p>
 
 <p align="center"><a href="https://img-blog.csdnimg.cn/20210418163715965.gif"> Visitor count<br><img src="https://profile-counter.glitch.me/crazyyanchao/count.svg" /></a></p>
 
-#  [𝑊𝑒𝑙𝑐𝑜𝑚𝑒 𝑇𝑜 马超的博客](https://img-blog.csdnimg.cn/20210418163715965.gif)
+#  𝑊𝑒𝑙𝑐𝑜𝑚𝑒 𝑇𝑜 马超的博客
 <a href="https://alili.tech"><img src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" align="right" height="275" /></a>
 - [TensorFlow实现ResNet 152网络结构的forward耗时检测](https://yc-ma.blog.csdn.net/article/details/65452735)
 - [TensorFlow实现Google InceptionNet V3](https://yc-ma.blog.csdn.net/article/details/65451916)
