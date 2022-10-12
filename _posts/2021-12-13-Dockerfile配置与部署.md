@@ -34,7 +34,7 @@ sudo docker ps
 ```
 - 对镜像设置TAG
 ```
-sudo docker tag graphene:v-1.0.0 127.0.0.1/dalaxy/graphene:v-1.0.0
+sudo docker tag graphene:v-1.0.0 127.0.0.1/model/graphene:v-1.0.0
 ```
 
 ```
@@ -58,7 +58,7 @@ Model@2021
 ```
 - 提交到镜像服务器
 ```
-sudo docker push 127.0.0.1/dalaxy/graphene:v-1.0.0
+sudo docker push 127.0.0.1/model/graphene:v-1.0.0
 ```
 
 ## 二、Dockerfile配置与部署【测试】
