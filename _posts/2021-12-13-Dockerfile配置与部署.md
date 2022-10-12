@@ -11,11 +11,82 @@ Here's the table of contents:
 1. TOC
 {:toc}
 
-## Dockerfile配置与部署
+## 一、Dockerfile配置与部署
 - 安装docker命令
 ```
 yum install docker
 ```
+- 打包docker镜像
+```
+sudo docker build -t graphene:v-1.0.0 .
+```
+- 查看镜像
+```
+sudo docker images
+```
+- 运行镜像
+```
+sudo docker run -p 8080:8080 graphene:v-1.0.0
+```
+- 查看docker容器中启动的进程
+```
+sudo docker ps
+```
+- 对镜像设置TAG
+```
+sudo docker tag graphene:v-1.0.0 127.0.0.1/dalaxy/graphene:v-1.0.0
+```
+
+```
+//修改/etc/hosts
+127.0.0.1    harbor.rabyte.com
+//修改/etc/docker/daemon.json
+{
+  "insecure-registry": ["127.0.0.1"],
+  "registry-mirrors": ["https://g9bsg11o.mirror.aliyuncs.com", "http://127.0.0.1"]
+}
+```
+
+```
+sudo vim /usr/lib/systemd/system/docker.service
+--insecure-registry 127.0.0.1
+```
+```
+sudo docker login 127.0.0.1
+model
+Model@2021
+```
+- 提交到镜像服务器
+```
+sudo docker push 127.0.0.1/dalaxy/graphene:v-1.0.0
+```
+
+## 二、Dockerfile配置与部署【测试】
+- 安装docker命令
+```
+yum install docker
+```
+```
+systemctl命令是系统服务管理器指令
+启动docker：
+systemctl start docker
+停止docker：
+systemctl stop docker
+重启docker：
+systemctl restart docker
+查看docker状态：
+systemctl status docker
+开机启动：
+systemctl enable docker
+查看docker概要信息
+docker info
+查看docker帮助文档
+docker ‐‐help
+```
+```
+sudo docker ps -a
+```
+
 - 打包docker镜像
 ```
 sudo docker build -t ongdb-graphene:v-0.0.1 .
@@ -28,6 +99,26 @@ sudo docker run -p 8080:8080 ongdb-graphene:v-0.0.1
 ```
 vim Dockerfile
 ```
+
+```
+FROM node:14.15.1-stretch
+ENV NODE_ENV development
+# Add a work directory
+WORKDIR /graphene
+# Cache and Install dependencies
+COPY . .
+RUN chmod +777 ./node_modules/.bin/webpack
+RUN chmod +777 ./node_modules/.bin/webpack-dev-server
+#COPY package.json .
+RUN npm install
+RUN npm run-script build
+# Copy app files
+# Expose port
+EXPOSE 8080
+# Start the app
+CMD [ "npm", "start" ]
+```
+
 ```
 FROM centos
 USER root
