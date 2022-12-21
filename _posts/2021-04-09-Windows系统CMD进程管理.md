@@ -12,6 +12,21 @@ Here's the table of contents:
 {:toc}
 
 ## CMD命令
+### 批量KILL进程
+```
+taskkill /F /im java.exe
+```
+
+### 查看Java进程
+```
+jps -l
+```
+
+### KILL某个进程
+```
+taskkill /PID 23456 -t -f
+```
+
 ### 进程管理
 ```
 Microsoft Windows [版本 10.0.18362.30]
