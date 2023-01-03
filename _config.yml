@@ -46,7 +46,7 @@ author:
   googleplus: coderyanchaoma # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
   telegram  : fake # "user_name" the last part of your profile url, e.g. https://t.me/user_name
   medium    : fake # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
-  zhihu     : ma-yan-chao-64 # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
+  zhihu     : YanchaoMa # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
   douban    : fake # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
   linkedin  : yanchao-ma-0624b3b7 # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
   github    : crazyyanchao # "user_name" the last part of your profile url, e.g. https://github.com/user_name
