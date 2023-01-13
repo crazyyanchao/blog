@@ -19,6 +19,12 @@ LOAD CSV FROM "http://data.neo4j.com/examples/person.csv" AS line
 RETURN *
 ```
 
+- 读取为数据列表时指定CSV分隔符
+```
+LOAD CSV FROM "http://data.neo4j.com/examples/person.csv" AS line FIELDTERMINATOR '\t'
+RETURN *
+```
+
 - 读取为数据对象
 ```
 //LOAD CSV WITH HEADERS FROM 'file:/artists.csv' AS line
