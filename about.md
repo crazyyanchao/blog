@@ -43,15 +43,22 @@ key: page-about
 <h1 dir="auto"><a id="user-content-𝑊𝑒𝑙𝑐𝑜𝑚𝑒-𝑇𝑜马超的博客" class="anchor" aria-hidden="true" href="#𝑊𝑒𝑙𝑐𝑜𝑚𝑒-𝑇𝑜马超的博客"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>𝑊𝑒𝑙𝑐𝑜𝑚𝑒 𝑇𝑜<a href="https://raw.githubusercontent.com/crazyyanchao/blog/master/images/wechat.gif" rel="nofollow">马超的博客</a></h1>
 <p dir="auto"><a href="https://alili.tech" rel="nofollow"><img src="https://camo.githubusercontent.com/2309797487e5e969659a3b545c96151807b04120a9cc2985f632ec94ba00c9f3/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f53576f536b4e36447854737a71494b4571762f67697068792e676966" align="right" height="275" data-canonical-src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" style="max-width: 100%;"></a></p>
 <ul dir="auto">
-<li><a href="https://yc-ma.blog.csdn.net/article/details/65452735" rel="nofollow">TensorFlow实现ResNet 152网络结构的forward耗时检测</a></li>
-<li><a href="https://yc-ma.blog.csdn.net/article/details/65451916" rel="nofollow">TensorFlow实现Google InceptionNet V3</a></li>
-<li><a href="https://yc-ma.blog.csdn.net/article/details/81320171" rel="nofollow">Neo4j Bloom试用体验</a></li>
-<li><a href="https://yc-ma.blog.csdn.net/article/details/80328423" rel="nofollow">知识图谱可视化</a></li>
+<li><a href="https://blog.csdn.net/superman_xxx/article/details/127971062" rel="nofollow">重磅上市《精通Neo4j》</a></li>
+<li><a href="https://blog.csdn.net/superman_xxx/article/details/130434269" rel="nofollow">LangChain 2 ONgDB：大模型+知识图谱实现领域知识问答</a></li>
+<li><a href="https://blog.csdn.net/superman_xxx/article/details/130393722" rel="nofollow">GPT-3.5 生成 Fabric Cypher</a></li>
+<li><a href="https://blog.csdn.net/superman_xxx/article/details/130022089" rel="nofollow">图谱问答：自定义组装问答系统进阶指南</a></li>
+<li><a href="https://blog.csdn.net/superman_xxx/article/details/129962189" rel="nofollow">使用Graphene构建知识图谱本体模型</a></li>
+<li><a href="https://blog.csdn.net/superman_xxx/article/details/130230839" rel="nofollow">基于RDF本体模型和图数据库实现知识查询与推理</a></li>
+<li><a href="https://blog.csdn.net/superman_xxx/article/details/130435718" rel="nofollow">生成 Cypher 能力：GPT3.5 VS ChatGLM</a></li>
+<li><a href="https://blog.csdn.net/superman_xxx/article/details/117047689" rel="nofollow">以图搜图-自动生成图模式匹配Cypher</a></li>
+<li><a href="https://blog.csdn.net/superman_xxx/article/details/124632638" rel="nofollow">Neo4j如何使用Data Fabric技术编织万亿图数据</a></li>
+<li><a href="https://blog.csdn.net/superman_xxx/article/details/122971888" rel="nofollow">Graphene图数据建模工具</a></li>
+<li><a href="https://blog.csdn.net/superman_xxx/article/details/118424060" rel="nofollow">图数据库ONgDB Release v-1.0.0</a></li>
 <li><a href="https://yc-ma.blog.csdn.net/article/details/51390804" rel="nofollow">MapReduce作业Map阶段和Reduce阶段重要过程详述</a></li>
 <li><a href="https://yc-ma.blog.csdn.net/article/details/91896841" rel="nofollow">Elasticsearch负载均衡策略发生死锁解决方案</a></li>
-<li><a href="https://yc-ma.blog.csdn.net/article/details/83589953" rel="nofollow">NEO4J亿级数据导入导出以及数据更新</a></li>
-<li><a href="https://yc-ma.blog.csdn.net/article/details/119703004" rel="nofollow">使用图数据分析比特币区块链</a></li>
-<li><a href="https://blog.csdn.net/superman_xxx/article/details/117339393" rel="nofollow">股权网络穿透一千层需要多久？</a></li>
+<li><a href="https://blog.csdn.net/superman_xxx/article/details/125054770" rel="nofollow">翻译：通过图分析分散股票投资组合并降低风险增加收益</a></li>
+<li><a href="https://blog.csdn.net/superman_xxx/article/details/123153365" rel="nofollow">从MariaDB的发展理解ONgDB开源图数据基金会</a></li>
+<li><a href="https://blog.csdn.net/superman_xxx/article/details/121549324" rel="nofollow">应用案例转载：基于图数据库的菜品推荐系统</a></li>
 </ul>
 <p dir="auto"><strong>创意化应用科学定律，系统化解决现实问题！</strong></p>
 <h2 dir="auto"><a id="user-content-𝐒𝐭𝐚𝐭𝐬" class="anchor" aria-hidden="true" href="#𝐒𝐭𝐚𝐭𝐬"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>𝐒𝐭𝐚𝐭𝐬</h2>
