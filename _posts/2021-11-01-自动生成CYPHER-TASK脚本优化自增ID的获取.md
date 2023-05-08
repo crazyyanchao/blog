@@ -57,7 +57,7 @@ CREATE TABLE `ONGDB_TASK_CHECK_POINT_CURSOR` (
 
 ~~## 获取游标ID~~
 ```
-CALL apoc.load.jdbc('jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC', 'SELECT huid FROM analytics_graph_data.HORGGuaranteeV001') YIELD row RETURN row.cursor_id AS batchMin;
+CALL apoc.load.jdbc('jdbc:mysql://testlab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.alibaba.com.cn:3306/analytics_graph_data?user=dev&password=testlabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC', 'SELECT huid FROM analytics_graph_data.HORGGuaranteeV001') YIELD row RETURN row.cursor_id AS batchMin;
 ```
 
 ```
@@ -70,7 +70,7 @@ olab.ids.batch.cursor(获取游标,获取当前游标的下一个游标,10000)
 
 ```
 // 获取当前游标
-CALL apoc.load.jdbc('jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC', 'SELECT cursor_id FROM analytics_graph_data.ONGDB_TASK_CHECK_POINT_CURSOR WHERE hcode=?',['HGRAPHTASK(HORGGuaranteeV001)-[担保]->(HORGGuaranteeV001)'])
+CALL apoc.load.jdbc('jdbc:mysql://testlab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.alibaba.com.cn:3306/analytics_graph_data?user=dev&password=testlabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC', 'SELECT cursor_id FROM analytics_graph_data.ONGDB_TASK_CHECK_POINT_CURSOR WHERE hcode=?',['HGRAPHTASK(HORGGuaranteeV001)-[担保]->(HORGGuaranteeV001)'])
 	YIELD row
     WITH row.cursor_id AS batchMin
 // 获取当前游标的下一个游标
@@ -78,7 +78,7 @@ CALL apoc.load.jdbc('jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-nort
 
 ~~## 更新游标ID~~
 ```
-CALL apoc.load.jdbcUpdate('jdbc:mysql://datalab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:3306/analytics_graph_data?user=dev&password=datalabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC','UPDATE analytics_graph_data.ONGDB_TASK_CHECK_POINT_CURSOR SET cursor_id=? WHERE hcode=?',[-1,'HGRAPHTASK(HORGGuaranteeV001)-[担保]->(HORGGuaranteeV001)']) YIELD row RETURN row;
+CALL apoc.load.jdbcUpdate('jdbc:mysql://testlab-contentdb-dev.crkldnwly6ki.rds.cn-north-1.alibaba.com.cn:3306/analytics_graph_data?user=dev&password=testlabgogo&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC','UPDATE analytics_graph_data.ONGDB_TASK_CHECK_POINT_CURSOR SET cursor_id=? WHERE hcode=?',[-1,'HGRAPHTASK(HORGGuaranteeV001)-[担保]->(HORGGuaranteeV001)']) YIELD row RETURN row;
 ```
 
 ## 版本V-1.0.2

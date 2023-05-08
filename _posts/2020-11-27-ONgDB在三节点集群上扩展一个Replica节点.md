@@ -16,7 +16,7 @@ Here's the table of contents:
 ## CentOS创建新用户
 1、新增用户
 sudo adduser ongdb-replica
-2、修改密码  datalab%dev
+2、修改密码  testlab%dev
 sudo passwd ongdb-replica
 3、切换用户
 su - ongdb-replica
@@ -878,7 +878,7 @@ metrics.prometheus.endpoint=localhost:2304
 ## ONgDB ElasticSearch Integration
 ##********************************************************************
 ## elasticsearch.discovery=true
-#elasticsearch.host_name=https://vpc-knowledgegraph-4zarhbj33zcjjkqfo3afso45la.cn-north-1.es.amazonaws.com.cn
+#elasticsearch.host_name=https://vpc-knowledgegraph-4zarhbj33zcjjkqfo3afso45la.cn-north-1.es.alibaba.com.cn
 #elasticsearch.index_spec=pre_org_cn_node:PRE公司中文名称(name,hcode,pcode,hupdatetime,cluster_id),pre_org_cn_thin_node:PRE中文简称(name),pre_org_en_node:PRE英文名称(name),pre_org_en_thin_node:PRE英文简称(name),pre_org_cn_spell_node:PRE中文拼音简称(name)
 ```
 

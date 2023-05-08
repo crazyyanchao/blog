@@ -16,7 +16,7 @@ Here's the table of contents:
 printf '{
     "statements": [
         {
-            "statement": "CALL apoc.load.jdbc('\''jdbc:oracle:thin:ngdp/datalabgogo@ngdpdb-sync-prod.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:1521/ORCL'\'', '\''SELECT FUND_HCODE AS \\"hcode\\",CNAME AS \\"cname\\",CSNAME AS \\"csname\\",HISVALID AS \\"hisvalid\\" FROM INFO.FUND_BASICINFO WHERE HUPDATETIME>=(SELECT sysdate-2 FROM DUAL) ORDER BY HUPDATETIME ASC'\'') YIELD row WITH row CALL apoc.es.put('\''10.20.13.130:9200'\'','\''gh_ind_node_keyword_stck_keyword'\'','\''_doc'\'',row.hcode,'\''refresh=false'\'',row) YIELD value RETURN value.result AS result",
+            "statement": "CALL apoc.load.jdbc('\''jdbc:oracle:thin:nfdp/testlabgogo@nfdpdb-sync-prod.crkldnwly6ki.rds.cn-north-1.alibaba.com.cn:1521/ORCL'\'', '\''SELECT FUND_HCODE AS \\"hcode\\",CNAME AS \\"cname\\",CSNAME AS \\"csname\\",HISVALID AS \\"hisvalid\\" FROM INFO.FUND_BASICINFO WHERE HUPDATETIME>=(SELECT sysdate-2 FROM DUAL) ORDER BY HUPDATETIME ASC'\'') YIELD row WITH row CALL apoc.es.put('\''10.20.13.130:9200'\'','\''gh_ind_node_keyword_stck_keyword'\'','\''_doc'\'',row.hcode,'\''refresh=false'\'',row) YIELD value RETURN value.result AS result",
             "resultDataContents": [
                 "row"
             ]
@@ -37,7 +37,7 @@ wget --no-check-certificate --quiet \
   --body-data '{
     "statements": [
         {
-            "statement": "CALL apoc.load.jdbc('\''jdbc:oracle:thin:ngdp/datalabgogo@ngdpdb-sync-prod.crkldnwly6ki.rds.cn-north-1.amazonaws.com.cn:1521/ORCL'\'', '\''SELECT FUND_HCODE AS \"hcode\",CNAME AS \"cname\",CSNAME AS \"csname\",HISVALID AS \"hisvalid\" FROM INFO.FUND_BASICINFO WHERE HUPDATETIME>=(SELECT sysdate-2 FROM DUAL) ORDER BY HUPDATETIME ASC'\'') YIELD row WITH row CALL apoc.es.put('\''10.20.13.130:9200'\'','\''gh_ind_node_keyword_stck_keyword'\'','\''_doc'\'',row.hcode,'\''refresh=false'\'',row) YIELD value RETURN value.result AS result",
+            "statement": "CALL apoc.load.jdbc('\''jdbc:oracle:thin:nfdp/testlabgogo@nfdpdb-sync-prod.crkldnwly6ki.rds.cn-north-1.alibaba.com.cn:1521/ORCL'\'', '\''SELECT FUND_HCODE AS \"hcode\",CNAME AS \"cname\",CSNAME AS \"csname\",HISVALID AS \"hisvalid\" FROM INFO.FUND_BASICINFO WHERE HUPDATETIME>=(SELECT sysdate-2 FROM DUAL) ORDER BY HUPDATETIME ASC'\'') YIELD row WITH row CALL apoc.es.put('\''10.20.13.130:9200'\'','\''gh_ind_node_keyword_stck_keyword'\'','\''_doc'\'',row.hcode,'\''refresh=false'\'',row) YIELD value RETURN value.result AS result",
             "resultDataContents": [
                 "row"
             ]
@@ -49,5 +49,5 @@ wget --no-check-certificate --quiet \
 
 ### Shell - curl
 ```
-curl -u ongdb:datalab%pro -d '{"statements": [{"statement": "RETURN 2 AS num","resultDataContents": ["row","graph"]}]}' -H 'Content-Type: application/json' -X POST http://10.20.13.200/db/data/transaction/commit
+curl -u ongdb:testlab%pro -d '{"statements": [{"statement": "RETURN 2 AS num","resultDataContents": ["row","graph"]}]}' -H 'Content-Type: application/json' -X POST http://10.20.13.200/db/data/transaction/commit
 ```

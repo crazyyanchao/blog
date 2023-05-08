@@ -24,8 +24,8 @@ Created on Tue Oct 27 15:13:46 2020
 @author: XXX
 """
 import cypher
-con = "http://ongdb:datalab%pro@datalab.ongdb.http.server/db/data"
-#con = "http://ongdb:datalab%pro@10.20.13.200/db/data"
+con = "http://ongdb:testlab%pro@testlab.ongdb.http.server/db/data"
+#con = "http://ongdb:testlab%pro@10.20.13.200/db/data"
 query = """
     MATCH p=()-->()-->() RETURN p LIMIT 100
 """
