@@ -33,9 +33,11 @@ Here's the table of contents:
 
 5. 递归的思想：使自主代理（Autonomous Agents）完全自主的核心设计思想。
 
-![AutoGPTs building AutoGPTs building AutoGPTs...](vx_images/549812157016.png =800x)
+![AutoGPTs building AutoGPTs building AutoGPTs...](https://camo.githubusercontent.com/8226dd8023ed52d438c66791ae849051fa7c8e1f874bb728ca9b2c3dbb1cd64b/68747470733a2f2f6170692e737461722d686973746f72792e636f6d2f7376673f7265706f733d546f72616e74756c696e6f2f6175746f2d67707426747970653d44617465)
 
 ## 让 AI 使用工具的案例
+
+>&emsp;&emsp;下面是基于`LangChain`实现的`AutoGPT`类程序，可以让智能代理程序完成使用`搜索引擎`和`本地知识库`等工具的功能。
 
 ### 使用搜索引擎
 
