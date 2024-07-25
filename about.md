@@ -25,47 +25,89 @@ titles:
 key: page-about
 ---
 
-<article class="markdown-body entry-content container-lg f5" itemprop="text"><h1 align="center" dir="auto"><a id="user-content--hello---im-马超" class="anchor" aria-hidden="true" href="#-hello---im-马超"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a> Hello! <g-emoji class="g-emoji" alias="wave" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png"><img class="emoji" alt="wave" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png"></g-emoji>  I'm <a href="https://github.com/crazyyanchao">马超</a>!</h1>
-<h1 align="center" dir="auto"><a id="user-content-a-𝑫𝒂𝒕𝒂-𝑬𝒏𝒈𝒊𝒏𝒆𝒆𝒓--" class="anchor" aria-hidden="true" href="#a-𝑫𝒂𝒕𝒂-𝑬𝒏𝒈𝒊𝒏𝒆𝒆𝒓--"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>a 𝑫𝒂𝒕𝒂 𝑬𝒏𝒈𝒊𝒏𝒆𝒆𝒓  </h1>
-<p align="center" dir="auto">
-  <strong><a href="https://raw.githubusercontent.com/crazyyanchao/blog/master/images/wechat.gif" rel="nofollow">公众号：马超的博客</a></strong> |
-  <strong><a href="https://yc-ma.blog.csdn.net" rel="nofollow">CSDN</a></strong> |
-  <strong><a href="https://www.linkedin.com/in/yanchao-ma-0624b3b7/" rel="nofollow">Linkedin</a></strong> |
-  <strong><a href="https://crazyyanchao.github.io/blog" rel="nofollow">GitHubIO</a></strong>  |
+
+<h1 align="center"> 𝐇𝐞𝐥𝐥𝐨! 👋 𝐈'𝒎 <a href="https://github.com/crazyyanchao">𝒀𝒂𝒏𝒄𝒉𝒂𝒐𝑴𝒂</a>!</h1>
+<h1 align="center">𝒂 𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓</h1>
+
+<p align="center">
+  <strong><a href="https://raw.githubusercontent.com/crazyyanchao/blog/master/images/wechat.gif">Wechat Account: Ma Chao's Blog</a></strong> |
+  <strong><a href="https://yc-ma.blog.csdn.net">CSDN</a></strong> |
+  <strong><a href="https://www.linkedin.com/in/yanchao-ma-0624b3b7/">Linkedin</a></strong> |
+  <strong><a href="https://crazyyanchao.github.io/blog">GitHubIO</a></strong>  |
   <strong><a href="https://github.com/crazyyanchao">GitHub</a></strong>  |
-  <strong><a href="https://www.zhihu.com/people/YanchaoMa" rel="nofollow">知乎</a></strong>  |
-  <strong><a href="https://space.bilibili.com/44763375" rel="nofollow">哔哩哔哩</a></strong>  |
-  <strong><a href="http://neo4j.com.cn/user/crazyyanchao" rel="nofollow">Neo4j中文社区</a></strong>  |
-  <strong><a href="http://www.demodashi.com/demo/13181.html" rel="nofollow">Demo大师</a></strong>  |
-  <strong><a href="https://gitee.com/yc-ma" rel="nofollow">码云</a></strong>
+  <strong><a href="https://www.zhihu.com/people/YanchaoMa">Zhihu</a></strong>  |
+  <strong><a href="https://space.bilibili.com/44763375">Bilibili</a></strong>  |
+  <strong><a href="http://neo4j.com.cn/user/crazyyanchao">Neo4j Community</a></strong>  |
+  <strong><a href="http://www.demodashi.com/demo/13181.html">Demo Master</a></strong>  |
+  <strong><a href="https://gitee.com/yc-ma">Gitee</a></strong>
+  <strong><a href="https://medium.com/@1141679423Chao">Medium</a></strong>
 </p>
-<p dir="auto"><a href="https://raw.githubusercontent.com/crazyyanchao/blog/master/images/wechat.gif" rel="nofollow"></a></p><p align="center" dir="auto"><a href="https://raw.githubusercontent.com/crazyyanchao/blog/master/images/wechat.gif" rel="nofollow"> Visitor count<br> <img src="https://camo.githubusercontent.com/27498ce046c5bd35b8cddfb8f97df319d388b5becf85f76d76dccb8636c585df/68747470733a2f2f70726f66696c652d636f756e7465722e676c697463682e6d652f6372617a7979616e6368616f2f636f756e742e737667" data-canonical-src="https://profile-counter.glitch.me/crazyyanchao/count.svg" style="max-width: 100%;"></a></p>
-<h1 dir="auto"><a id="user-content-𝑊𝑒𝑙𝑐𝑜𝑚𝑒-𝑇𝑜马超的博客" class="anchor" aria-hidden="true" href="#𝑊𝑒𝑙𝑐𝑜𝑚𝑒-𝑇𝑜马超的博客"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>𝑊𝑒𝑙𝑐𝑜𝑚𝑒 𝑇𝑜<a href="https://raw.githubusercontent.com/crazyyanchao/blog/master/images/wechat.gif" rel="nofollow">马超的博客</a></h1>
-<p dir="auto"><a href="https://alili.tech" rel="nofollow"><img src="https://camo.githubusercontent.com/2309797487e5e969659a3b545c96151807b04120a9cc2985f632ec94ba00c9f3/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f53576f536b4e36447854737a71494b4571762f67697068792e676966" align="right" height="275" data-canonical-src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" style="max-width: 100%;"></a></p>
-<ul dir="auto">
-<li><a href="https://blog.csdn.net/superman_xxx/article/details/127971062" rel="nofollow">重磅上市《精通Neo4j》</a></li>
-<li><a href="https://blog.csdn.net/superman_xxx/article/details/130434269" rel="nofollow">LangChain 2 ONgDB：大模型+知识图谱实现领域知识问答</a></li>
-<li><a href="https://blog.csdn.net/superman_xxx/article/details/130393722" rel="nofollow">GPT-3.5 生成 Fabric Cypher</a></li>
-<li><a href="https://blog.csdn.net/superman_xxx/article/details/130022089" rel="nofollow">图谱问答：自定义组装问答系统进阶指南</a></li>
-<li><a href="https://blog.csdn.net/superman_xxx/article/details/129962189" rel="nofollow">使用Graphene构建知识图谱本体模型</a></li>
-<li><a href="https://blog.csdn.net/superman_xxx/article/details/130230839" rel="nofollow">基于RDF本体模型和图数据库实现知识查询与推理</a></li>
-<li><a href="https://blog.csdn.net/superman_xxx/article/details/130435718" rel="nofollow">生成 Cypher 能力：GPT3.5 VS ChatGLM</a></li>
-<li><a href="https://blog.csdn.net/superman_xxx/article/details/117047689" rel="nofollow">以图搜图-自动生成图模式匹配Cypher</a></li>
-<li><a href="https://blog.csdn.net/superman_xxx/article/details/124632638" rel="nofollow">Neo4j如何使用Data Fabric技术编织万亿图数据</a></li>
-<li><a href="https://blog.csdn.net/superman_xxx/article/details/122971888" rel="nofollow">Graphene图数据建模工具</a></li>
-<li><a href="https://blog.csdn.net/superman_xxx/article/details/118424060" rel="nofollow">图数据库ONgDB Release v-1.0.0</a></li>
-<li><a href="https://yc-ma.blog.csdn.net/article/details/51390804" rel="nofollow">MapReduce作业Map阶段和Reduce阶段重要过程详述</a></li>
-<li><a href="https://yc-ma.blog.csdn.net/article/details/91896841" rel="nofollow">Elasticsearch负载均衡策略发生死锁解决方案</a></li>
-<li><a href="https://blog.csdn.net/superman_xxx/article/details/125054770" rel="nofollow">翻译：通过图分析分散股票投资组合并降低风险增加收益</a></li>
-<li><a href="https://blog.csdn.net/superman_xxx/article/details/123153365" rel="nofollow">从MariaDB的发展理解ONgDB开源图数据基金会</a></li>
-<li><a href="https://blog.csdn.net/superman_xxx/article/details/121549324" rel="nofollow">应用案例转载：基于图数据库的菜品推荐系统</a></li>
-</ul>
-<p dir="auto"><strong>创意化应用科学定律，系统化解决现实问题！</strong></p>
-<h2 dir="auto"><a id="user-content-𝐒𝐭𝐚𝐭𝐬" class="anchor" aria-hidden="true" href="#𝐒𝐭𝐚𝐭𝐬"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>𝐒𝐭𝐚𝐭𝐬</h2>
-<p align="left" dir="auto">
-<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/c28e4d201692a458162fb8ac999537345bddd5ba0b5d34d4d4ae54166e740fc9/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d6372617a7979616e6368616f2673686f775f69636f6e733d7472756526696e636c7564655f616c6c5f636f6d6d6974733d74727565"><img alt="crazyyanchao's Github Stats" height="220" src="https://camo.githubusercontent.com/c28e4d201692a458162fb8ac999537345bddd5ba0b5d34d4d4ae54166e740fc9/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d6372617a7979616e6368616f2673686f775f69636f6e733d7472756526696e636c7564655f616c6c5f636f6d6d6974733d74727565" data-canonical-src="https://github-readme-stats.vercel.app/api?username=crazyyanchao&amp;show_icons=true&amp;include_all_commits=true" style="max-width: 100%;"></a>
-<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/94014d67034f01cd8bf056711327c81b0fd625ca41f03afcd9ed5feb85128491/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d6372617a7979616e6368616f"><img alt="crazyyanchao's Github Stats" height="220" src="https://camo.githubusercontent.com/94014d67034f01cd8bf056711327c81b0fd625ca41f03afcd9ed5feb85128491/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d6372617a7979616e6368616f" data-canonical-src="https://github-readme-stats.vercel.app/api/top-langs/?username=crazyyanchao" style="max-width: 100%;"></a>
-</p>
-<h2 dir="auto"><a id="user-content-𝐀𝐛𝐨𝐮𝐭" class="anchor" aria-hidden="true" href="#𝐀𝐛𝐨𝐮𝐭"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>𝐀𝐛𝐨𝐮𝐭</h2>
-<p dir="auto">如果您有任何问题，可以来<a href="https://raw.githubusercontent.com/crazyyanchao/blog/master/images/wechat.gif" rel="nofollow">我的博客</a>或者给我发送邮件：<a href="https://mail.qq.com/" rel="nofollow">yanchaoma@foxmail.com</a></p>
-</article>
+
+<a href="https://raw.githubusercontent.com/crazyyanchao/blog/master/images/wechat.gif"><p align="center"> Visitor count<br> <img src="https://profile-counter.glitch.me/crazyyanchao/count.svg" /></a>
+
+## 𝑨𝒃𝒐𝒖𝒕 𝑴𝒆
+My career reflects my core values: an enduring commitment to lifelong learning, a deep dedication to environmental stewardship, and an insatiable curiosity that drives my exploration and innovation. These values guide my work across various domains.
+
+I have written some programs to help my wife, who works in the media industry, monitor financial market information. These programs can scrape data from financial and government websites and then push updates via WeChat. Additionally, I have written other private programs to help her improve work efficiency and earnings.
+
+### 🌟 Featured Projects
+I have a deep admiration for engineers who contribute to open-source projects. I have either led or participated in the following open-source projects (listing only a few):
+- [Graph Data Lab](https://github.com/ongdb-contrib): This is a team I lead, primarily focused on developing and collecting interesting repositories related to graph data applications.
+- [Neo4j](https://github.com/neo4j): I have developed multiple plugins for the Neo4j ecosystem and have supported many other developers in the community.
+- [The Graph Foundation](https://github.com/graphfoundation): I have developed multiple plugins for the ONgDB ecosystem and supported developers in deploying causal graph database clusters for training models and other high-performance graph database application scenarios.
+- [LangChain](https://github.com/langchain-ai): I have provided code patches for LangChain to improve its performance in the GraphRAG environment.
+- [GraphRAG](https://github.com/microsoft/graphrag): I have provided patches for Microsoft GraphRAG to enhance its parser performance on Chinese datasets.
+
+### 🛠 Tech Stack
+I am passionate about AI technology and have a grasp of LLM application development, graph data technology, front-end and back-end technologies. I never set limits for myself and I enjoy using technology to solve practical problems.
+
+### 🖥 Hardware
+I enjoy developing on both Linux and Windows platforms.
+
+### 📚 Books I’ve Written
+- [《精通Neo4j》](https://baike.baidu.com/item/%E7%B2%BE%E9%80%9ANeo4j): This is a book that I wrote together with friends from the Neo4j community.
+
+### 💼 Work Experience
+- From April 2020 to the present, I have been working at a leading public fund management company. My primary responsibilities include data development, knowledge graph platform construction, and LLM application development, specifically applied to the financial asset management sector.
+- From May 2017 to April 2020, I worked at the Institute of Automation, Chinese Academy of Sciences for three years. My main responsibilities included the development of big data platforms and knowledge graph platform construction, with applications in social media sentiment analysis, multimedia analysis, and related fields.
+
+### 📚 Education
+- [Fund Practitioner Qualification](https://gs.amac.org.cn/amac-infodisc/res/pof/person/personDetail.html?accountId=2311031355428237&userId=1700000000699002): I have some experience in the fund industry.
+- **Beijing Information Science and Technology University**: Bachelor of Science in Computer Science and Technology.
+
+I have also obtained various certification certificates, which can be viewed on my [LinkedIn](https://www.linkedin.com/in/yanchao-ma-0624b3b7) profile.
+
+## 𝑺𝒐𝒎𝒆 𝑩𝒍𝒐𝒈
+<a href="https://alili.tech"><img src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" align="right" height="275" /></a>
+- [LangChain 2 ONgDB：大模型+知识图谱实现领域知识问答](https://blog.csdn.net/superman_xxx/article/details/130434269)
+- [GPT-3.5 生成 Fabric Cypher](https://blog.csdn.net/superman_xxx/article/details/130393722)
+- [图谱问答：自定义组装问答系统进阶指南](https://blog.csdn.net/superman_xxx/article/details/130022089)
+- [使用Graphene构建知识图谱本体模型](https://blog.csdn.net/superman_xxx/article/details/129962189)
+- [基于RDF本体模型和图数据库实现知识查询与推理](https://blog.csdn.net/superman_xxx/article/details/130230839)
+- [生成 Cypher 能力：GPT3.5 VS ChatGLM](https://blog.csdn.net/superman_xxx/article/details/130435718)
+- [以图搜图-自动生成图模式匹配Cypher](https://blog.csdn.net/superman_xxx/article/details/117047689)
+- [Neo4j如何使用Data Fabric技术编织万亿图数据](https://blog.csdn.net/superman_xxx/article/details/124632638)
+- [Graphene图数据建模工具](https://blog.csdn.net/superman_xxx/article/details/122971888)
+- [图数据库ONgDB Release v-1.0.0](https://blog.csdn.net/superman_xxx/article/details/118424060)
+- [MapReduce作业Map阶段和Reduce阶段重要过程详述](https://yc-ma.blog.csdn.net/article/details/51390804)
+- [Elasticsearch负载均衡策略发生死锁解决方案](https://yc-ma.blog.csdn.net/article/details/91896841)
+- [翻译：通过图分析分散股票投资组合并降低风险增加收益](https://blog.csdn.net/superman_xxx/article/details/125054770)
+- [从MariaDB的发展理解ONgDB开源图数据基金会](https://blog.csdn.net/superman_xxx/article/details/123153365)
+- [应用案例转载：基于图数据库的菜品推荐系统](https://blog.csdn.net/superman_xxx/article/details/121549324)
+
+<font color=#0969DA>**𝑊𝑒𝑙𝑐𝑜𝑚𝑒 𝑇𝑜 [𝑀𝑦 𝐵𝑙𝑜𝑔](https://raw.githubusercontent.com/crazyyanchao/blog/master/images/wechat.gif)!**</font>
+
+## 𝐒𝐭𝐚𝐭𝐬
+
+### 📈 GitHub Stats
+![Beckett's GitHub stats](https://github-readme-stats.vercel.app/api?username=crazyyanchao&show_icons=true&theme=algolia)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=crazyyanchao&layout=compact&theme=algolia)
+
+### 🔥 Streak Stats
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=crazyyanchao&theme=algolia)
+
+### 🏆 GitHub Trophies
+![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=crazyyanchao&theme=algolia&column=7)
+
+---
+Feel free to reach out if you'd like to collaborate or just say hi!
