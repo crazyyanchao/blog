@@ -43,7 +43,7 @@ key: page-about
   <strong><a href="https://medium.com/@1141679423Chao">Medium</a></strong>
 </p>
 
-<a href="https://raw.githubusercontent.com/crazyyanchao/blog/master/images/wechat.gif"><p align="center"> Visitor count<br> <img src="https://profile-counter.glitch.me/crazyyanchao/count.svg" /></a>
+<p align="center"> Visitor count<br> <img src="https://profile-counter.glitch.me/crazyyanchao/count.svg" /><p>
 
 ## 𝑨𝒃𝒐𝒖𝒕 𝑴𝒆
 My career reflects my core values: an enduring commitment to lifelong learning, a deep dedication to environmental stewardship, and an insatiable curiosity that drives my exploration and innovation. These values guide my work across various domains.
@@ -95,7 +95,7 @@ I have also obtained various certification certificates, which can be viewed on 
 - [从MariaDB的发展理解ONgDB开源图数据基金会](https://blog.csdn.net/superman_xxx/article/details/123153365)
 - [应用案例转载：基于图数据库的菜品推荐系统](https://blog.csdn.net/superman_xxx/article/details/121549324)
 
-<font color=#0969DA>**𝑊𝑒𝑙𝑐𝑜𝑚𝑒 𝑇𝑜 [𝑀𝑦 𝐵𝑙𝑜𝑔](https://raw.githubusercontent.com/crazyyanchao/blog/master/images/wechat.gif)!**</font>
+**𝑊𝑒𝑙𝑐𝑜𝑚𝑒 𝑇𝑜 [𝑀𝑦 𝐵𝑙𝑜𝑔](https://raw.githubusercontent.com/crazyyanchao/blog/master/images/wechat.gif)!**
 
 ## 𝐒𝐭𝐚𝐭𝐬
 
@@ -110,4 +110,4 @@ I have also obtained various certification certificates, which can be viewed on 
 ![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=crazyyanchao&theme=algolia&column=7)
 
 ---
-Feel free to reach out if you'd like to collaborate or just say hi!
+**Feel free to reach out if you'd like to collaborate or just say hi!**
