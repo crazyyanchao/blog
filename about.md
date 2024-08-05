@@ -57,6 +57,7 @@ I have a deep admiration for engineers who contribute to open-source projects. I
 - [The Graph Foundation](https://github.com/graphfoundation): I have developed multiple plugins for the ONgDB ecosystem and supported developers in deploying causal graph database clusters for training models and other high-performance graph database application scenarios.
 - [LangChain](https://github.com/langchain-ai): I have provided code patches for LangChain to improve its performance in the GraphRAG environment.
 - [GraphRAG](https://github.com/microsoft/graphrag): I have provided patches for Microsoft GraphRAG to enhance its parser performance on Chinese datasets.
+- [LLMCompiler](https://github.com/crazyyanchao/llmcompiler): The core code of the LLMCompiler project was contributed by me.
 
 ### 🛠 Tech Stack
 I am passionate about AI technology and have a grasp of LLM application development, graph data technology, front-end and back-end technologies. I never set limits for myself and I enjoy using technology to solve practical problems.

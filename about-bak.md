@@ -27,7 +27,7 @@ key: page-about
 ---
 
 ## YcMa
-![avatar](https://avatars.githubusercontent.com/u/19403898?s=400&u=7b919bdae0c7ffc6c659981bab439138e0e6ed99&v=4)
+![avatar](https://avatars.githubusercontent.com/u/19403898?s=400&u=653236a54c30bcaf89100a4eb3f6684c97be8664&v=4)
 
 ## Goals | 个人目标
 有创意地应用科学定律，来系统化地解决现实问题。
