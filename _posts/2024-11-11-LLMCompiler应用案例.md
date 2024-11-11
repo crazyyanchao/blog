@@ -164,12 +164,6 @@ if __name__ == '__main__':
 
 ```python
 # tools/search.py
-# -*- coding: utf-8 -*-
-"""
-@Author  : Yc-Ma
-@Desc    : INDICATOR FILTER
-@Time    : 2024-11-09 12:32:15
-"""
 import logging
 
 from langchain_core.tools import BaseTool
