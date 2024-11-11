@@ -32,30 +32,33 @@ Here's the table of contents:
 - 头部10家公募近半年发布的reits产品合同和冰川网络今年八月份的财务报告
 
 ```mermaid
-%%{init: {'flowchart': {'curve': 'linear'}}}%%
+%%{init: {'flowchart': {'curve': 'linear', 'nodeSpacing': 40, 'rankSpacing': 40}}}%%
 graph TD;
-	__start__([__start__]):::first
-	__end__([__end__]):::last
-	1(Task 1 topn_fund_company)
-	2(Task 2 wd_mf_desc)
-	3(Task 3 fund_ann_wy_es)
-	4(Task 4 wd_a_desc)
-	5(Task 5 ashare_ann_wy_es)
-	6(Task 6 join)
-	1 --> 2;
-	2 --> 3;
-	4 --> 5;
-	1 --> 6;
-	2 --> 6;
-	3 --> 6;
-	4 --> 6;
-	5 --> 6;
-	__start__ --> 1;
-	__start__ --> 4;
-	6 --> __end__;
-	classDef default fill:#f2f0ff,line-height:1.2
-	classDef first fill-opacity:0
-	classDef last fill:#bfb6fc
+    __start__([__start__]):::first
+    __end__([__end__]):::last
+    1(Task 1 topn_fund_company):::task
+    2(Task 2 wd_mf_desc):::task
+    3(Task 3 fund_ann_wy_es):::task
+    4(Task 4 wd_a_desc):::task
+    5(Task 5 ashare_ann_wy_es):::task
+    6(Task 6 join):::task
+
+    1 --> 2;
+    2 --> 3;
+    4 --> 5;
+    1 --> 6;
+    2 --> 6;
+    3 --> 6;
+    4 --> 6;
+    5 --> 6;
+    __start__ --> 1;
+    __start__ --> 4;
+    6 --> __end__;
+
+    classDef default fill:#f5f5f5,stroke:#bbbbbb,stroke-width:2px,line-height:1.2;
+    classDef first fill:#ffcc00,stroke:#ff9900,stroke-width:3px,border-radius:10px;
+    classDef last fill:#4CAF50,stroke:#388E3C,stroke-width:3px,border-radius:10px;
+    classDef task fill:#ffffff,stroke:#1e88e5,stroke-width:2px,border-radius:5px;
 ```
 
 ### 示例实现
@@ -77,33 +80,36 @@ results = RunLLMCompiler(
 - A房屋和B房屋在2023~2025年的租金是多少
 
 ```mermaid
-%%{init: {'flowchart': {'curve': 'linear'}}}%%
+%%{init: {'flowchart': {'curve': 'linear', 'nodeSpacing': 40, 'rankSpacing': 40}}}%%
 graph TD;
-	__start__([<p>__start__</p>]):::first
-	__end__([<p>__end__</p>]):::last
-	1(Task 1 search)
-	2(Task 2 search)
-	3(Task 3 search)
-	4(Task 4 search)
-	5(Task 5 search)
-	6(Task 6 search)
-	7(Task 7 join)
-	1 --> 7;
-	2 --> 7;
-	3 --> 7;
-	4 --> 7;
-	5 --> 7;
-	6 --> 7;
-	__start__ --> 1;
-	__start__ --> 2;
-	__start__ --> 3;
-	__start__ --> 4;
-	__start__ --> 5;
-	__start__ --> 6;
-	7 --> __end__;
-	classDef default fill:#f2f0ff,line-height:1.2
-	classDef first fill-opacity:0
-	classDef last fill:#bfb6fc
+    __start__(__start__):::first
+    __end__(__end__):::last
+    1(Task 1 search):::task
+    2(Task 2 search):::task
+    3(Task 3 search):::task
+    4(Task 4 search):::task
+    5(Task 5 search):::task
+    6(Task 6 search):::task
+    7(Task 7 join):::task
+
+    1 --> 7;
+    2 --> 7;
+    3 --> 7;
+    4 --> 7;
+    5 --> 7;
+    6 --> 7;
+    __start__ --> 1;
+    __start__ --> 2;
+    __start__ --> 3;
+    __start__ --> 4;
+    __start__ --> 5;
+    __start__ --> 6;
+    7 --> __end__;
+
+    classDef default fill:#f5f5f5,stroke:#bbbbbb,stroke-width:2px,line-height:1.2;
+    classDef first fill:#ffcc00,stroke:#ff9900,stroke-width:3px,border-radius:10px;
+    classDef last fill:#4CAF50,stroke:#388E3C,stroke-width:3px,border-radius:10px;
+    classDef task fill:#ffffff,stroke:#1e88e5,stroke-width:2px,border-radius:5px;
 ```
 
 ### 示例实现
@@ -111,10 +117,11 @@ graph TD;
 - 入口函数
 
 ```python
-# search_indicator.py
 import os
 import logging
+import random
 
+from jsdata.llm_langchain import ChatHarvestAI
 from llmcompiler.chat.run import RunLLMCompiler
 from llmcompiler.few_shot.few_shot import DefaultBaseFewShot, BaseFewShot
 from llmcompiler.result.chat import ChatRequest
@@ -135,15 +142,43 @@ def get_few_shot() -> BaseFewShot:
     return few_shot
 
 
-def filter_search(query: str):
+custom_prompts = {
+    "JOINER_RESPONSE_HUMAN_TEMPLATE": """请基于用户问题，和给出的数据信息，有逻辑并且严谨的生成用户需要的`Final Answer`。
+生成`Final Answer`时需要重点检查生成的数值类内容是否正确，同时需要保证回复的数据信息是用户问题所涉及的。
+`Final Answer`的内容可以是几句精简的总结性内容但是需要保证完整的回复用户问题。
+`Final Answer`中如果需要进行数值类分析，仔细理解字段信息后可以尝试分析最大值、最小值、以及数据变化趋势等信息。
+`Final Answer`请不要带有任何格式和大段的数字类内容。
+请记住最终返回给用户的响应格式应该是`RESPONSE FORMAT INSTRUCTIONS`可选项中的一种，请按照要求输出。
+
+当结果是`_finish_`时，请按照下面的格式将结果填入`_finish_`中，格式如下：
+
+[
+ {{
+    "指标名称":...,
+    "指标值":...
+ }}
+]
+
+**用户问题**
+{question}
+
+Let’s think step by step!"""
+}
+
+
+def filter_stock(query: str):
     query += f'{query}'
     chat = ChatRequest(message=query)
     # 加载TOOLS
     path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'tools')
     tools = Tools.load_tools(path)
+    # 演示批量加载`tools`后如何给`tool`参数重新赋值
+    tools = [type(tool)(path="s3://...", test="test") for tool in tools]
+
     # 初始化LLM
-    llm = ChatOpenAI(model="gpt-4o", temperature=0, max_retries=3)
-    llm_compiler = RunLLMCompiler(chat=chat, tools=tools, llm=llm, few_shot=get_few_shot())
+    llm = ChatHarvestAI(model="gpt-4o", temperature=0, max_retries=3)
+    llm_compiler = RunLLMCompiler(chat=chat, tools=tools, llm=llm, few_shot=get_few_shot(),
+                                  custom_prompts=custom_prompts)
 
     # result = llm_compiler.planer_invoke_output()
     result = llm_compiler()
@@ -157,7 +192,32 @@ if __name__ == '__main__':
     # Configure logging
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     query = "A房屋和B房屋在2023~2025年的租金是多少"
-    print(filter_search(query))
+    print(filter_stock(query))
+
+# 输出结果
+# {
+#     "_thought_": "我已经获得了A房屋和B房屋在2023年至2025年的租金信息，可以总结出最终答案。",
+#     "_finish_": [{
+#             "指标名称": "A房屋2023年租金",
+#             "指标值": 0.2543497200498416
+#         }, {
+#             "指标名称": "A房屋2024年租金",
+#             "指标值": 0.21585695508713343
+#         }, {
+#             "指标名称": "A房屋2025年租金",
+#             "指标值": 0.01981390801092242
+#         }, {
+#             "指标名称": "B房屋2023年租金",
+#             "指标值": 0.9560805412684173
+#         }, {
+#             "指标名称": "B房屋2024年租金",
+#             "指标值": 0.367723174253609
+#         }, {
+#             "指标名称": "B房屋2025年租金",
+#             "指标值": 0.49962108675051187
+#         }
+#     ]
+# }
 ```
 
 - TOOL实现
@@ -165,6 +225,7 @@ if __name__ == '__main__':
 ```python
 # tools/search.py
 import logging
+import random
 
 from langchain_core.tools import BaseTool
 from pydantic import BaseModel, Field
@@ -173,7 +234,6 @@ from typing import Type, Any
 from llmcompiler.tools.configure.pydantic_oper import field_descriptions_join
 from llmcompiler.tools.generic.action_output import ActionOutput, ActionOutputError
 from llmcompiler.tools.generic.render_description import render_text_description
-
 
 logger = logging.getLogger(__name__)
 
@@ -191,9 +251,11 @@ class Search(BaseTool):
     )
     args_schema: Type[BaseModel] = InputSchema
 
+    path: str = None
+
     def _run(self, **kwargs: Any) -> ActionOutput:
         try:
-            # ... 检索文本工具
+            result = f"租金是 {random.random()} 元~"
             return ActionOutput(any=result)
         except Exception as e:
             logger.error(str(e))
@@ -206,33 +268,36 @@ class Search(BaseTool):
 
 ### DAG示例
 ```mermaid
-%%{init: {'flowchart': {'curve': 'linear'}}}%%
+%%{init: {'flowchart': {'curve': 'linear', 'nodeSpacing': 50, 'rankSpacing': 50}}}%%
 graph TD;
-	__start__([<p>__start__</p>]):::first
-	__end__([<p>__end__</p>]):::last
-	1(Task 1 pe)
-	2(Task 2 pe)
-	3(Task 3 pb)
-	4(Task 4 pb)
-	5(Task 5 collect)
-	6(Task 6 collect)
-	7(Task 7 join)
-	1 --> 2;
-	3 --> 4;
-	2 --> 5;
-	4 --> 6;
-	1 --> 7;
-	2 --> 7;
-	3 --> 7;
-	4 --> 7;
-	5 --> 7;
-	6 --> 7;
-	__start__ --> 1;
-	__start__ --> 3;
-	7 --> __end__;
-	classDef default fill:#f2f0ff,line-height:1.2
-	classDef first fill-opacity:0
-	classDef last fill:#bfb6fc
+    __start__(<b>Start</b>):::first
+    __end__(<b>End</b>):::last
+    1(Task 1 pe):::task
+    2(Task 2 pe):::task
+    3(Task 3 pe):::task
+    4(Task 4 pe):::task
+    5(Task 5 collect):::task
+    6(Task 6 collect):::task
+    7(Task 7 join):::task
+
+    1 --> 2;
+    3 --> 4;
+    2 --> 5;
+    4 --> 6;
+    1 --> 7;
+    2 --> 7;
+    3 --> 7;
+    4 --> 7;
+    5 --> 7;
+    6 --> 7;
+    __start__ --> 1;
+    __start__ --> 3;
+    7 --> __end__;
+
+    classDef default fill:#f5f5f5,stroke:#bbbbbb,stroke-width:2px,line-height:1.3, font-size:16px;
+    classDef first fill:#ff7e5f,stroke:#ff5f57,stroke-width:3px,border-radius:20px;
+    classDef last fill:#00b09b,stroke:#1de9b6,stroke-width:3px,border-radius:20px;
+    classDef task fill:#ffecd2,stroke:#ff6347,stroke-width:2px,border-radius:10px;
 ```
 
 ### 规划器日志
