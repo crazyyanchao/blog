@@ -267,6 +267,7 @@ class Search(BaseTool):
 - 2023年底pettm在1-3之间股票或pb在4~6之间的股票
 
 ### DAG示例
+
 ```mermaid
 %%{init: {'flowchart': {'curve': 'linear', 'nodeSpacing': 50, 'rankSpacing': 50}}}%%
 graph TD;
@@ -301,6 +302,7 @@ graph TD;
 ```
 
 ### 规划器日志
+
 ```
 ================================ Planer Compiler ================================
 pe,pe,pb,pb,collect,collect
@@ -416,6 +418,7 @@ if __name__ == '__main__':
 ```
 
 - TOOL-概念股过滤
+
 ```python
 import logging
 
@@ -454,6 +457,7 @@ class Concept(CompilerBaseTool):
 ```
 
 - TOOL-PE过滤
+
 ```python
 import logging
 
@@ -493,6 +497,7 @@ class PE(CompilerBaseTool):
 ```
 
 - TOOL-PB过滤
+
 ```python
 import logging
 
@@ -532,6 +537,7 @@ class PB(CompilerBaseTool):
 ```
 
 - TOOL-结果集处理
+
 ```python
 import logging
 
@@ -569,6 +575,7 @@ class Collect(BaseTool):
 ```
 
 - SCHEMA定义
+
 ```python
 from enum import Enum
 from typing import Optional, Union, List, Any
@@ -623,5 +630,7 @@ class CollectInputSchema(BaseModel):
 class CollectOutputSchema(BaseModel):
     code: str = Field(description="股票代码")
 ```
+
 ## LLMCompiler SDK 链接
+
 [LLMCompiler](https://github.com/crazyyanchao/llmcompiler)
