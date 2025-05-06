@@ -25,3 +25,14 @@ Gemfile.lock
 _site/
 .jekyll-metadata
 .jekyll-cache/
+
+.env
+
+.env.local
+.env.development
+.env.production
+.env.test
+.env.test.local
+.env.production.local
+
+/.idea/
