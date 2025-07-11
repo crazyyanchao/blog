@@ -30,6 +30,8 @@ password = password
 del /f /q dist\*.*
 # 打包前确认已经配置了setup.py文件
 python setup.py sdist
+# 或使用uv
+uv build
 ```
 
 ### 上传
