@@ -12,7 +12,7 @@ Here's the table of contents:
 {:toc}
 
 ## 私有仓库发布
-### 配置Home-User目录下的.npmrc文件
+### 配置Home-User目录下的.npmrc文件一
 
 ```shell
 registry=http://10.0.0.01:8081/repository/npm-internal/
@@ -24,13 +24,21 @@ prefix=D:\software\nodejs\node_global
 strict-ssl=false
 ```
 
-### 打包
+### 配置Home-User目录下的.npmrc文件二
+
+```shell
+registry=https://registry.npmjs.org/
+always-auth=true
+//registry.npmjs.org/:_authToken=<***>
+```
+
+## 打包
 ```
 npm install
 npm build
 ```
 
-### 上传
+## 上传
 ```
 npm publish
 ```
