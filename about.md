@@ -43,8 +43,6 @@ key: page-about
   <strong><a href="https://medium.com/@1141679423Chao">Medium</a></strong>
 </p>
 
-<a href="https://raw.githubusercontent.com/crazyyanchao/blog/master/images/wechat.gif"><p align="center"> Visitor count<br> <img src="https://profile-counter.glitch.me/crazyyanchao/count.svg" /></a>
-
 ## 𝑨𝒃𝒐𝒖𝒕 𝑴𝒆
 My career reflects my core values: an enduring commitment to lifelong learning, a deep dedication to environmental stewardship, and an insatiable curiosity that drives my exploration and innovation. These values guide my work across various domains.
 
