@@ -15,6 +15,8 @@ Here's the table of contents:
 
 本文档对比分析了当前主流的GraphRAG相关项目，包括传统的GraphRAG实现和最新的HiRAG层次化知识检索增强生成框架。这些项目在综述总结、跨文档整合、易用性等方面各有特色，为不同场景下的知识图谱构建和问答提供了多样化的解决方案。
 
+> GraphRAG 框架初步设计：[分层知识图谱](../core/README.md)
+
 ## 项目对比表
 
 |        项目         | **综述总结能力** | **跨文档主题整合** | **易用性/开源支持** | **Token 成本** | **核心优化方向** | **适用场景** |
@@ -38,6 +40,8 @@ Here's the table of contents:
 
 # Deep Research类项目对比
 
+> Deep Research 框架初步设计：LLM【tongyi-deepresearch-30b-a3b】 + LangGraph【ReAct和IterResearch】=> Output
+
 ## 项目对比表
 
 |        项目         | **多源搜索能力** | **LLM集成** | **递归任务分解** | **多代理协作** | **易用性/开源支持** | **工具生态** | **核心优化方向** | **适用场景** |
@@ -55,6 +59,7 @@ Here's the table of contents:
 | **MetaSearch** | ⚠️ 基础 | ✅ 多模态 | ❌ 单次处理 | ❌ 无 | ✅ 学习友好 | ⚠️ 基础 | 模块化RAG、多模态检索 | 学习RAG、快速原型 |
 | **OpenMatch** | ❌ 检索优化 | ❌ 无 | ❌ 单次处理 | ❌ 无 | ✅ 学术研究 | ❌ 无 | 神经检索、传统检索模块 | 学术研究、定制检索 |
 | **ROMA** | ✅ 强项 | ✅ 多LLM | ✅ 强项 | ✅ 核心功能 | ✅ 高（Apache-2.0） | ✅ 丰富 | 递归分解、多代理协作、企业级安全 | 复杂任务自动化、研究分析 |
+| **Tongyi DeepResearch** | ✅ 强项 | ✅ 30B-A3B模型 | ✅ 端到端RL | ❌ 单次处理 | ✅ 高（Apache-2.0） | ✅ 丰富工具生态 | 大规模持续预训练、强化学习优化、多模式推理 | 长程深度研究、复杂信息检索、学术研究 |
 
 ## 项目详情
 
@@ -66,6 +71,7 @@ Here's the table of contents:
 | langchain-ai/open_deep_research | https://github.com/langchain-ai/open_deep_research | LangChain官方深度研究代理，简单可配置，支持多种模型提供商、搜索工具和MCP服务器，性能与主流代理相当 |
 | togethercomputer/open_deep_research | https://github.com/togethercomputer/open_deep_research | Together AI的深度研究工作流，提供多跳推理的复杂主题研究，生成全面有引用的内容，模拟人类研究过程 |
 | deep-research (u14app) | https://github.com/u14app/deep-research | 支持任何LLM的深度研究代理，提供SSE API和MCP服务器支持，适合实时研究和API集成场景 |
+| Tongyi DeepResearch | https://github.com/Alibaba-NLP/DeepResearch | 阿里巴巴通义实验室开发的领先开源深度研究代理，30.5B总参数量，每token仅激活3.3B参数，专为长程深度信息检索任务设计，支持ReAct和IterResearch两种推理模式 |
 
 ### 多源搜索和聚合工具
 
